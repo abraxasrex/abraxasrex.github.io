@@ -20,7 +20,9 @@ var ctx = canvas.getContext('2d');
   var app=angular.module('Hungr',[]);
   app.controller('mainController', function($scope, $http){
     // to smudge//
-
+    var CLIENT_ID= "A5UA3LYLAL1V0EZ1EPAVSP5M2RV2GKWIE05VOIB2PSN2Z0KT";
+var CLIENT_SECRET= "LWTHBH1MD1C52W0SFCARHN2VMEPG5BHKFHGPKPAWFBOY2OFE"
+var F2F_KEY= "f206a12418638ea2613ab7aae579b673"
     // //
     var foodPending;
     var placePending;
