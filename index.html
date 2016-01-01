@@ -5,14 +5,26 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css" rel="stylesheet" />
-
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="less.js" type="text/javascript"></script>
 <script type="text/javascript" src="functions.js"></script>
 
 
-<div class=" container container-fluid" >
+<div class=" container container-fluid" style="z-index: -2;">
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
+  <li class="gradient"></li>
 
- <div id="page1">
+
+ <div id="page1" style="z-index: 0">
 
       <div class="bar">
         <div class="row">
@@ -60,12 +72,14 @@
    </div>
      </div>
 
-     <div class="col-xs-12 full_width">
+     <div class="col-xs-12 full_width" style="z-index:0;">
 
      <div class="row title col-md-12" id="page2"><h1>My Projects</h1></div>
 
     <div class="main_content second col-xs-12">
 
+      <a href="hungrapp.meteor.com" target="_blank"><div class="pf_link col-md-6 col-md-offset-3 col-xs-12 fifth_link" ></div></a>
+            <div class="row banner col-md-12 col-xs-12">  <h1>   Hungr: Eat in or Eat Out? </h1> </div>
 
 <a href="http://selfcinema.meteor.com" target="_blank"><div class=" pf_link col-md-6 col-md-offset-3 col-xs-12 seventh_link"></div></a>
   <div class="row banner col-md-12 col-xs-12">       <h1>Selfcinema</h1>  </div>
@@ -82,9 +96,6 @@
 
      <a href="http://codepen.io/jbreasor/live/pjvGGP" target="_blank"><div class="pf_link col-md-6 col-md-offset-3 col-xs-12 fourth_link"></div></a>
               <div class="row banner col-md-12 col-xs-12">   <h1>Simon Says</h1>  </div>
-
-    <a href="http://codepen.io/jbreasor/live/vOoLvo" target="_blank"><div class="pf_link col-md-6 col-md-offset-3 col-xs-12 fifth_link" ></div></a>
-          <div class="row banner col-md-12 col-xs-12">  <h1>   Quote Generator </h1> </div>
 
       <a href="http://codepen.io/jbreasor/live/LpEJXj" target="_blank"> <div class=" pf_link col-md-6 col-md-offset-3 col-xs-12 sixth_link" ></div></a>
                   <div class="row banner col-md-12 col-xs-12">         <h1> Calculator </h1>   </div>
