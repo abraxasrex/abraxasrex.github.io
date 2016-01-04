@@ -117,9 +117,9 @@ p{
   text-align:right;
   clear:both;
 }
-.owl{
-  background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGT6ukChHtXk81EnMnaM4aevz2xUk5X20n6wjp5bJZnhkB8uk5");
-}
+
+  /* background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGT6ukChHtXk81EnMnaM4aevz2xUk5X20n6wjp5bJZnhkB8uk5"); */
+
 
 .pf_link{
   height:350px;
@@ -158,15 +158,10 @@ background-image:url("http://imgur.com/C0bSOJn.jpg");
 }
 
 /* animation */
-
-.bg-bubbles{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 600px;
-	z-index: -1;
+.hidden{
+  display: none;
 }
+
 	.container li{
     top:-200px;
     overflow:hidden;
@@ -209,7 +204,7 @@ background-image:url("http://imgur.com/C0bSOJn.jpg");
 			width: 60px;
 			height: 60px;
 
-			animation-duration: 44s;
+			animation-duration: 40s;
 
 			background-color: fade(white, 25%);
 		}
@@ -229,8 +224,8 @@ background-image:url("http://imgur.com/C0bSOJn.jpg");
 
 		 li:nth-child(7){
 			left: 32%;
-			width: 160px;
-			height: 160px;
+			width: 140px;
+			height: 140px;
 
 			animation-delay: 7s;
 		}
@@ -241,7 +236,7 @@ background-image:url("http://imgur.com/C0bSOJn.jpg");
 			height: 20px;
 
 			animation-delay: 15s;
-			animation-duration: 80s;
+			animation-duration: 30s;
 		}
 
 	 li:nth-child(9){
@@ -250,7 +245,7 @@ background-image:url("http://imgur.com/C0bSOJn.jpg");
 			height: 10px;
 
 			animation-delay: 2s;
-			animation-duration: 80s;
+			animation-duration: 60s;
 			background-color: fade(white, 30%);
 		}
 
@@ -259,7 +254,7 @@ background-image:url("http://imgur.com/C0bSOJn.jpg");
 			width: 160px;
 			height: 160px;
 
-			animation-delay: 11s;
+			animation-delay: 10s;
 		}
 
 

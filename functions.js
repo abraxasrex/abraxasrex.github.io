@@ -33,13 +33,13 @@ $(document).ready(function() {
 
     $( ".bar" ).effect( "bounce", { times: 3 }, "slow" );
 
-    if ($("div").hasClass("owl")){
-      $("div").removeClass("owl")
-      $("#wiggle").html("<span class='glyphicon glyphicon-tree-conifer'id='owlspan'></span> owls");
+    if ($(".container li").hasClass("hidden")){
+      $(".container li").removeClass("hidden");
+    //  $("#wiggle").html("<span class='glyphicon glyphicon-tree-conifer'id='owlspan'></span> owls");//
     }
      else{
- $(".container-fluid").addClass("owl")
-    $("#wiggle").html("<span class='glyphicon glyphicon-tree-conifer'id='owlspan'></span>    normal");
+ $(".container li").addClass("hidden");
+  //  $("#wiggle").html("<span class='glyphicon glyphicon-tree-conifer'id='owlspan'></span>    normal");
      }
 
   });
