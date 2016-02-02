@@ -1,51 +1,36 @@
-$(document).ready(function() {
-   var current;
-   current='connect';
-  $("#connect").click(function(){
-	  if(current!=='connect'){
-       $("#fader").show();
-       $(".about").slideToggle("slow");
-   current='connect';
-	  }
-     $('html,.container').animate({
-    scrollTop: $("#page1").offset().top-10
-      }, 1000);
-  });
+(function($){
+  $(function(){
 
-  $("#about").click(function(){
-	   if(current!=='about'){
-  $("#fader").hide();
-   $(".about").slideToggle("slow");
-      current='about';
-	   }
-     $('html,.container').animate({
-    scrollTop: $("#page1").offset().top-20
-      }, 1000);
-  });
+    $('.button-collapse').sideNav();
 
-  $("#portfolio").click(function(){
-    $('html,.container').animate({
-    scrollTop: $("#page2").offset().top-10
-      }, 1000);
-  });
 
-  $("#wiggle").click(function(){
+     $('.carousel').carousel();
 
-    $( ".bar" ).effect( "bounce", { times: 3 }, "slow" );
 
-    if ($(".container li").hasClass("hidden")){
-      $(".container li").removeClass("hidden");
-    //  $("#wiggle").html("<span class='glyphicon glyphicon-tree-conifer'id='owlspan'></span> owls");//
+      $("#about").click(function(){
+         $('html,.container, body').animate({
+        scrollTop: $("#section").offset().top-50
+          }, 1000);
+      });
+
+      $("#links").click(function(){
+         $('html,.container, body').animate({
+        scrollTop: $("#footer").offset().top-50
+          }, 1000);
+      });
+
+
+
+$("#animate").click(function(){
+    if ($(".bg_bubbles").hasClass("hidden")){
+      $(".bg_bubbles").removeClass("hidden");
     }
      else{
- $(".container li").addClass("hidden");
-  //  $("#wiggle").html("<span class='glyphicon glyphicon-tree-conifer'id='owlspan'></span>    normal");
+ $(".bg_bubbles").addClass("hidden");
      }
-
   });
 
-  });
-        //draw background//
+        //draw bubbles  ///
   var colors = new Array(
   [204, 255, 255],
   [102, 255, 255],
@@ -55,15 +40,8 @@ $(document).ready(function() {
   [0, 51, 204]);
 
 var step = 0;
-//color table indices for:
-// current color left
-// next color left
-// current color right
-// next color right
 var colorIndices = [0,1,2,3];
-
-//transition speed
-var gradientSpeed = 0.002;
+var gradientSpeed = 0.006;
 
 function updateGradient()
 {
@@ -97,8 +75,7 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
     colorIndices[0] = colorIndices[1];
     colorIndices[2] = colorIndices[3];
 
-    //pick two new target color indices
-    //do not pick the same as the current one
+
     colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
     colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
 
@@ -106,3 +83,6 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 }
 
 setInterval(updateGradient,10);
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
