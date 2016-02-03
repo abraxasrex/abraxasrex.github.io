@@ -16,16 +16,18 @@
 
       <script src="static/script.js"></script>
       <script type="text/javascript" src="app.js"></script>
+
+      <title>PlaceDrop</title>
 </head>
-  <body ng-app="MoonWalk">
+  <body ng-app="PlaceDrop">
 
     <div id="sidedrawer" class="mui--no-user-select"  ng-controller="MapController as map" >
-      <div id="sidedrawer-brand" class="mui--appbar-line-height mui--text-title" >Options </div>
+      <div id="sidedrawer-brand" class="mui--appbar-line-height mui--text-title" > Get Directions: </div>
       <div class="mui-divider"></div>
         <label for="new_origin">Origin:</label>
         <input type="text" name="new_origin" ng-model="origin" placeholder="somewhere" value="{{ origin }}">
 
-        <label for="new_destination">Destinations: </label>
+        <label for="new_destination">Destination: </label>
         <input type="text" name="new_destination"  ng-model="destination" placeholder="somewhere else" value="{{ destination }}">
 
         <label for="new_origin">Transit:</label>
@@ -58,53 +60,56 @@
           <h1> PlaceDrop </h1>
           <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
           <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
-          <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Fancy Maps</span>
+          <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Customizable Map</span>
         </div>
       </div>
     </header>
     <div id="content-wrapper">
       <div class="mui--appbar-height"></div>
-      <div class="mui-container-fluid" ng-controller="MapController as map">
-      <!--  <br>
-        <h1>Fancy Maps</h1> -->
-          <div id="map"></div>
 
+      <div class="mui-container-fluid" ng-controller="MapController as map">
+          <div id="map"></div>
       </div>
     </div>
     <footer id="footer">
+
       <div class="mui-container-fluid" ng-controller="MapController as map">
-        <div class="mui-col-md-1">
-
-        <!--  <label for="new_image">Add Pic Url:</label>  -->
-
-          <button class=" image_submit mui-btn mui-btn--fab mui-btn--primary" ng-click="images.push(image_upload)" style="float: left; clear: right;font-size:10px;">Add Pic <br> Url</button>
-        </div>
-
-        <div class="mui-col-md-4">
-          <input type="url" name="new_image" ng-model="image_upload" placeholder="image.jpg" style="color: black; overflow: hidden">
-           {{image_upload}} </input>
-
-              <br><br>
 
 
-          <div ng-repeat="image in images" ng-hide="!images.length" class="marker_image" style="float:left" ng-click="selectImage($index)">
-            <img ng-src="{{image}}" ng-class="{bordered: getImage(image)}">
-               <button class="mui-btn mui-btn--fab mui-btn--danger" ng-click="images.splice($index, 1)">X</button>
-          </div>
-        </div>
 
-        <div class="mui-col-md-3">
-           <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" ng-click="change_marker()">Apply Changes</button>
-           <br>
+        <div class="mui-col-md-5">
            <h5>Title</h5>
-           <input type="text" name="title" ng-model="new_title" style="color: black" placeholder="place title" value="{{new_title}}"></input>
-        </div>
+           <input type="text" name="title" ng-model="new_title" style="color: black;width:50%;" placeholder="place title" value="{{new_title}}"></input>
 
-      <div class="mui-col-md-4">
         <h5>Note</h5>
-        <textarea name="notes" id="note" rows="4" cols="40" ng-model="note" placeholder="write note here" style="color: black">
+        <textarea name="notes" id="note" rows="4" cols="50" ng-model="note" placeholder="write note here" style="color: black">
               {{note}}
         </textarea>
+      </div>
+
+      <div class="mui-col-md-1">
+        <br>
+        <br>
+        <button class=" image_submit mui-btn mui-btn--fab mui-btn--primary" ng-click="images.push(image_upload)" style="float: left; clear: right;font-size:10px;">Add Pic <br> Url</button>
+      </div>
+
+      <div class="mui-col-md-4">
+        <br>
+        <br>
+        <input type="url" name="new_image" ng-model="image_upload" placeholder="water-drop.png" style="color: black; overflow: hidden">
+         {{image_upload}} </input>
+            <br><br>
+        <div ng-repeat="image in images" ng-hide="!images.length" class="marker_image" style="float:left" ng-click="selectImage($index)">
+          <img ng-src="{{image}}" ng-class="{bordered: getImage(image)}">
+             <button class="mui-btn mui-btn--fab mui-btn--danger" ng-click="images.splice($index, 1)">X</button>
+        </div>
+      </div>
+
+      <div class="mui-col-md-1">
+        <br>
+         <button class="mui-btn mui-btn--small mui-btn--raised" ng-click="change_marker()" style="background-color:#5cb85c; color:white;">Apply Changes</button>
+         <br>
+         <button class="mui-btn mui-btn--small mui-btn--danger mui-btn--raised" ng-click="delete_marker()">Delete</button>
       </div>
 
       </div>

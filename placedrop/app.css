@@ -14,7 +14,9 @@ html, body {
 #dir-panel{
   width:100%;
 }
-
+.mui-container-fluid{
+  background-color: #2196F3;
+}
 .image_submit{
   width: 10px;
   height: 10px;

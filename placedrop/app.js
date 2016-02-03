@@ -1,25 +1,22 @@
 (function(){
-  var moonWalkApp = angular.module('MoonWalk',[]);
-  moonWalkApp.controller('MapController', function($scope, $http) {
+  var placeDropApp = angular.module('PlaceDrop',[]);
+  placeDropApp.controller('MapController', function($scope, $http) {
 //define global vars //
 var map;
 var directionsService;
  var directionsDisplay;
   var infoWindow;
   var all_waypoints=[];
-//scpe editing  //
-//$scope.selected_image= "http://www.naturephoto-cz.com/photos/sevcik/green-monkey--xxxkockodan_dsg3970.jpg";
+
+//user input //
   $scope.edit= false;
   $scope.new_title;
-  //geography ///
+  $scope.selected_image="water-drop.png";
 $scope.destination= "Renton, WA";
 $scope.origin= "Seattle, WA";
 $scope.transit_type= "DRIVING";
 $scope.note= "green monkeys are swinging. head for the valley and pack your picnic.";
-$scope.images=["http://www.naturephoto-cz.com/photos/sevcik/green-monkey--xxxkockodan_dsg3970.jpg", "https://upload.wikimedia.org/wikipedia/commons/b/b3/Chlorocebus_Aethiops_(Green_Monkey).JPG"];
-
-
-
+$scope.images=['https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG', 'http://blog.nola.com/news_impact/2008/10/large_wisnerbike.JPG'];
 
 
 $(function() {
@@ -38,28 +35,31 @@ $(function() {
         styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway", "elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
       });
         map.setCenter(pos);
-        //define infowindow     !to redefine  later
+        //define infowindow     to redefine  later
         infoWindow = new google.maps.InfoWindow({map: map});
           infoWindow.setPosition(pos);
-          infoWindow.setContent('You are here. Double click anywhere on the map to add a drop, or search for places near here, to the left');
+          infoWindow.setContent('You are here! If you live in Seattle, we have some recommended places to check out. Otherwise, upload and select images, notes and titles for your drops below. double click anywhere on the map to add a drop.');
 
-           directionsService = new google.maps.DirectionsService();
+          directionsService = new google.maps.DirectionsService();
 
           directionsDisplay = new google.maps.DirectionsRenderer({
             draggable: true,
             map: map,
             panel: document.getElementById('dir-panel')
           });
+
            directionsDisplay.addListener('directions_changed', function() {
             computeTotalDistance(directionsDisplay.getDirections());
+             directionsDisplay.setOptions({ preserveViewport: true, draggable: true});
+             directionsDisplay.setPanel(document.getElementById("dir-panel"));
            });
 
            google.maps.event.addListener(map, 'dblclick', function(e) {
              var image = {
                    url: $scope.selected_image.toString(),
-                   scaledSize: new google.maps.Size(35, 35),
-                    origin: new google.maps.Point(0,0),
-                    anchor: new google.maps.Point(0, 0)
+                   scaledSize: new google.maps.Size(40, 40)
+   //edit marker position    //    origin: new google.maps.Point(0,0),
+                            //      anchor: new google.maps.Point(0, 0)
                  };
               var new_marker= new google.maps.Marker({
                 position: e.latLng,
@@ -67,6 +67,8 @@ $(function() {
                 type: 'user',
                 note: $scope.note,
                 title: $scope.new_title,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
                 icon: image
               });
               add_listeners(new_marker);
@@ -94,10 +96,31 @@ $(function() {
         directionsDisplay.addListener('directions_changed', function() {
          computeTotalDistance(directionsDisplay.getDirections());
         });
+
+        google.maps.event.addListener(map, 'dblclick', function(e) {
+          var image = {
+                url: $scope.selected_image.toString(),
+                scaledSize: new google.maps.Size(40, 40)
+//edit marker position    //    origin: new google.maps.Point(0,0),
+                         //      anchor: new google.maps.Point(0, 0)
+              };
+           var new_marker= new google.maps.Marker({
+             position: e.latLng,
+             map: map,
+             type: 'user',
+             note: $scope.note,
+             title: $scope.new_title,
+             animation: google.maps.Animation.DROP,
+             draggable: true,
+             icon: image
+           });
+           add_listeners(new_marker);
+
+      });
   }
 });
 
-//end of INIT //
+//end of initialization //
 getData();
 //reverse geocode //
 function getReverseGeocodingData(latitude, longitude) {
@@ -121,11 +144,9 @@ $scope.selectImage= function(i){
   console.log($scope.images[i]);
   if ($scope.selected_image !== $scope.images[i]){
       $scope.selected_image = $scope.images[i];
-
   }
   else{
-      $scope.selected_image= "place_icon.png";
-
+      $scope.selected_image= "water-drop.png";
   }
 }
 $scope.getImage= function(img){
@@ -145,9 +166,10 @@ function getData(){
         position: new google.maps.LatLng(response.data[i].lat, response.data[i].lng),
        map: map,
       title: response.data[i].name,
-      icon: 'place_icon.png',
+      animation: google.maps.Animation.DROP,
+      icon: 'water-drop.png',
       type: 'attraction',
-      note: 'Hi!'
+      note: 'I am ' + response.data[i].name +  '. Click me to make me bounce, then you can edit me.'
   });
  add_listeners(marker);
      }
@@ -157,19 +179,11 @@ function getData(){
 
 
 $scope.redraw= function(){
-  /*console.log("recalculatin");
-if(all_waypoints.length){
-  new_waypoints = all_waypoints.map(function(waypoint) {return {location: waypoint.position, stopover: false};});
-}else{
-  new_waypoints = [];
-}
-*/
 
   directionsService.route({
     origin: $scope.destination,
     destination: $scope.origin,
-    travelMode:  google.maps.TravelMode[$scope.transit_type]
-    //waypoints: new_waypoints
+    travelMode:  google.maps.TravelMode[$scope.transit_type],
   }, function(response, status) {
     if (status === google.maps.DirectionsStatus.OK) {
       console.log("ready to render");
@@ -180,7 +194,6 @@ if(all_waypoints.length){
   });
 };
 
-
     function computeTotalDistance(result) {
       var total = 0;
       var myroute = result.routes[0];
@@ -190,7 +203,11 @@ if(all_waypoints.length){
       }
       total = total / 1000;
       document.getElementById('total').innerHTML = total + ' km';
+    
+       directionsDisplay.setOptions({ preserveViewport: true, draggable: true});
+       directionsDisplay.setPanel(document.getElementById("dir-panel"));
     };
+
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -200,36 +217,24 @@ if(all_waypoints.length){
 
 
 function add_listeners(marker){
+
   google.maps.event.addListener(marker, 'mouseover', function() {
-
-      infoWindow.setContent(marker.note);
+      infoWindow.setContent(marker.title + ": " + marker.note);
     infoWindow.open(map, marker);
-
 });
-  google.maps.event.addListener(marker, 'dblclick', function (e) {
 
-    marker.setMap(null);
-    /*
-       if($.inArray( this, all_waypoints) !== -1){
-       all_waypoints.splice(this, 1);
-          //    $scope.redraw();
-       }else{
-        //    all_waypoints.push(this);
-          //    $scope.redraw();
-       }
-       */
-  });
+  //google.maps.event.addListener(marker, 'dblclick', function (e) {
+  //  marker.setMap(null);
+  //});
 
   google.maps.event.addListener(marker, 'click', function(){
     if (marker.getAnimation() !== null) {
       $scope.edit= false;
       marker.setAnimation(null);
-
     } else {
       marker.setAnimation(google.maps.Animation.BOUNCE);
       $scope.edit= marker;
     }
-
   });
 }
 
@@ -246,9 +251,17 @@ $scope.change_marker= function(){
            title: $scope.new_title,
            icon: image,
            type: 'user',
+           animation: google.maps.Animation.DROP,
            note: $scope.note
           });
             $scope.edit.setMap(null);
+            $scope.edit = false;
+  }
+}
+
+$scope.delete_marker= function(){
+  if($scope.edit !== false){
+    $scoped.edit.setMap(null);
   }
 }
 
