@@ -9,13 +9,13 @@ var directionsService;
   var all_waypoints=[];
 
 //user input //
-  $scope.edit= false;
+//  $scope.edit= false;
   $scope.new_title;
   $scope.selected_image="water-drop.png";
 $scope.destination= "Renton, WA";
 $scope.origin= "Seattle, WA";
 $scope.transit_type= "DRIVING";
-$scope.note= "green monkeys are swinging. head for the valley and pack your picnic.";
+$scope.note= "This bike path is awesome.";
 $scope.images=['https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG', 'http://blog.nola.com/news_impact/2008/10/large_wisnerbike.JPG'];
 
 
@@ -38,7 +38,7 @@ $(function() {
         //define infowindow     to redefine  later
         infoWindow = new google.maps.InfoWindow({map: map});
           infoWindow.setPosition(pos);
-          infoWindow.setContent('You are here! If you live in Seattle, we have some recommended places to check out. Otherwise, upload and select images, notes and titles for your drops below. double click anywhere on the map to add a drop.');
+          infoWindow.setContent('You are here! If you live in Seattle, we have some recommended places to check out. Otherwise, upload and select images, notes and titles for your drops below. double click anywhere on the map to add a drop. click an existing drop to make it bounce and edit or delete it.');
 
           directionsService = new google.maps.DirectionsService();
 
@@ -141,9 +141,10 @@ function getReverseGeocodingData(latitude, longitude) {
 }
 
 $scope.selectImage= function(i){
-  console.log($scope.images[i]);
+
   if ($scope.selected_image !== $scope.images[i]){
       $scope.selected_image = $scope.images[i];
+      console.log($scope.selected_image);
   }
   else{
       $scope.selected_image= "water-drop.png";
@@ -169,7 +170,7 @@ function getData(){
       animation: google.maps.Animation.DROP,
       icon: 'water-drop.png',
       type: 'attraction',
-      note: 'I am ' + response.data[i].name +  '. Click me to make me bounce, then you can edit me.'
+      note: 'Click me to make me bounce, then you can edit or delete me.'
   });
  add_listeners(marker);
      }
@@ -203,7 +204,7 @@ $scope.redraw= function(){
       }
       total = total / 1000;
       document.getElementById('total').innerHTML = total + ' km';
-    
+
        directionsDisplay.setOptions({ preserveViewport: true, draggable: true});
        directionsDisplay.setPanel(document.getElementById("dir-panel"));
     };
@@ -240,6 +241,7 @@ function add_listeners(marker){
 
 $scope.change_marker= function(){
   if($scope.edit !== false){
+    console.log("edit triggered");
             var image = {
                   url: $scope.selected_image.toString(),
                   size: new google.maps.Size(25, 25)
