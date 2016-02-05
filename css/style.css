@@ -11,9 +11,18 @@ body{
 
 .carousel{
 height: 500px;
-margin-top:25px;
-padding-top:0;
 
+margin-bottom: 0px;
+padding-top:0;
+}
+hr{
+  background-color: orange;
+}
+.header{
+  margin-top:50px;
+}
+.section{
+  margin-top:0px;
 }
 .card{
   width: 100%;
