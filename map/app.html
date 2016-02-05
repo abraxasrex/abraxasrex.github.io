@@ -1,0 +1,51 @@
+<head>
+  <title>climate datamap</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <script type='text/javascript' src='tinycolor.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="datamaps.world.min.js"></script>
+
+  <script type="text/javascript" src="app.js"> </script>
+  <link rel="stylesheet" href="app.css">
+
+<body>
+
+  <div id= "slider" class="col-md-3">
+    <h3> Temperature Change from  <br>
+      <output id="rangevalue1">1901</output> to <output id="rangevalue2"> 2009 </output> </h3>
+      <br>
+<label for="range1"> Start Year: </label>
+<input class="bar" type="range" name="range1" id="rangeinput1" value="1901" min="1901" max="2009" onchange="rangevalue1.value=value" />
+<span class="highlight"></span>
+
+<br>
+<label for="range2"> End Year: </label>
+<input class="bar" type="range" name="range2" id="rangeinput2" value="2009" min="1901" max="2009" onchange="rangevalue2.value=value" />
+<span class="highlight"></span>
+
+<br>
+  <h4>double click to get data, triple click to save color.</h4>
+</div>
+
+<div class="col-md-9 main">
+
+  <div id="map" class=" col-md-12" style="height:550px;"></div>
+
+  <div class="footer col-md-12">
+  <h5>  <span class="worldbank"> Climate data provided courtesy of <a href="http://data.worldbank.org/topic/climate-change">World Bank</a> </span>
+    <span id="github"> <a href="abraxasrex.github.io"> jonathan reasor, 2015 </a>
+       <a href="github.com/abraxasrex"> Github </a> </span>
+  </h5>
+  </div>
+
+</div>
+</body>
