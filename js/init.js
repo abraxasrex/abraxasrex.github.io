@@ -1,5 +1,12 @@
 (function($){
   $(function(){
+
+    window.onload = function () {
+    if(screen.width <= 767) {
+        var mvp = document.getElementById('myViewport');
+        mvp.setAttribute('content','width=767');
+    }
+}
    ///collapse sidebar //
     $('.button-collapse').sideNav();
 
