@@ -6,6 +6,15 @@
 
      $('.carousel').carousel();
 
+     $('.arrow-left').click(function(){
+       event.preventDefault();
+     $('.carousel').carousel('prev');
+   });
+
+   $('.arrow-right').click(function(){
+        event.preventDefault();
+     $('.carousel').carousel('next');
+   })
 
       $("#about").click(function(){
          $('html,.container, body').animate({
