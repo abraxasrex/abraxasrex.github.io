@@ -1,7 +1,14 @@
 
 body{
+  margin:auto;
+  padding: auto;
 
-
+}
+#logo-container{
+  font-size: 2.1em;
+}
+#logo-small{
+font-size: 0.6em;
 }
 .icon-block {
   padding: 0 15px;
@@ -13,7 +20,7 @@ body{
 .carousel{
 margin-bottom: 0px;
 padding-bottom:0;
-height: 75%;
+height: 35em;
 }
 .arrow-right {
 
