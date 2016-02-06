@@ -2,7 +2,7 @@
 body{
   margin:auto;
   padding: auto;
-
+min-width: 750px;
 }
 #logo-container{
   font-size: 2.1em;
