@@ -50,7 +50,7 @@ $(function() {
 
            directionsDisplay.addListener('directions_changed', function() {
             computeTotalDistance(directionsDisplay.getDirections());
-             directionsDisplay.setOptions({ preserveViewport: true, draggable: true});
+        //     directionsDisplay.setOptions({ preserveViewport: true, draggable: true});
              directionsDisplay.setPanel(document.getElementById("dir-panel"));
            });
 
