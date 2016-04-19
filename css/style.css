@@ -186,7 +186,7 @@ padding-bottom:0;
   float: left;
   }
 
-nav a {
+a {
   text-decoration: none;
 }
 
@@ -206,6 +206,7 @@ nav {
   line-height: 50px;
   vertical-align: middle;
 }
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -221,42 +222,55 @@ article {
   text-align: center;
   }
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: wrap;
-  border-style: solid;
-  border-width: thin;
-}
-
 .carousel-section {
   text-align: center;
   width: 90%;
   margin: 0 auto;
   }
 
-footer {
-  height: 20em;
+  footer {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    height: 400px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
   }
+
+.bio {
+    height: 400px;
+}
 
 .bio article {
   width: 50%;
   float: right;
-  }
-  .bio img {
-    width: 50%;
-    float: left;
+  height: 75%;
+  padding-top:0px;
   }
 
-.bio, .papertrail {
-  width: 45%;
+  .img-container {
+    width: 50%;
+    float: left;
+    height: 67.5%;
+  }
+
+  .bio img {
+   max-width: 100%;
+   max-height: 100%;
+  }
+
+.bio {
+  width: 40%;
   }
 
 .papertrail {
   display: flex;
   justify-content: space-around;
   flex-flow: wrap;
-  align-content: space-around;
+  align-content: space-between;
+  width: 50%;
+  height: 75%;
 }
 
 .papertrail-item {
@@ -276,6 +290,7 @@ footer {
     justify-content: space-around;
     flex-flow: wrap;
     max-width: 100%;
+    margin-bottom: 100px;
   }
 
   .testimonial article {
