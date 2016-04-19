@@ -8,7 +8,7 @@ blue #587895
 
 body {
   min-width: 500px;
-  background: #BDAFB4;
+  background: #f4f1f2;
     }
 
 #logo-container {
@@ -23,8 +23,19 @@ font-size: 0.6em;
   padding: 0 15px;
   }
 
-.icon-block .material-icons {
+.material-icons {
 	font-size: inherit;
+  color: #B94439;
+  font-size: 50px;
+  }
+
+  .slideshow-frame {
+    height: 300px;
+    width: 75%;
+    border-style: solid;
+    border-width: thin;
+    margin: 0 auto;
+    z-index: 1;
   }
 
 .arrow-right {
@@ -33,7 +44,7 @@ font-size: 0.6em;
 	border-top: 25px solid transparent;
 	border-bottom: 25px solid transparent;
 	float: right;
-	border-left: 25px solid orange;
+	border-left: 25px solid #B94439;
   }
 
 .arrow-left {
@@ -42,15 +53,15 @@ font-size: 0.6em;
 	border-top: 25px solid transparent;
 	border-bottom: 25px solid transparent;
 	float: left;
-	border-right:25px solid orange;
+	border-right:25px solid #B94439;
   }
 
-.arrow_left, .arrow-right {
+.arrow-line {
+  width: 90%;
   display:inline-block;
   position: relative;
-  z-index: 2;
-  margin:0;
-  padding:0;
+  z-index: -2;
+  bottom: 200px;
   }
 
 hr {
@@ -190,7 +201,7 @@ nav a:link{
  }
 
 nav {
-  background: #468966;
+  background: #587895;
   height: 50px;
   line-height: 50px;
   vertical-align: middle;
@@ -214,10 +225,14 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-flow: wrap;
+  border-style: solid;
+  border-width: thin;
 }
 
 .carousel-section {
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
   }
 
 footer {
