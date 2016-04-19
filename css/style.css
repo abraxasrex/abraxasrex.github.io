@@ -1,6 +1,14 @@
 
+/*palette
+dark #504A59
+red #B94439
+light #BDAFB4
+blue #587895
+*/
+
 body {
   min-width: 500px;
+  background: #BDAFB4;
     }
 
 #logo-container {
@@ -167,6 +175,26 @@ padding-bottom:0;
   float: left;
   }
 
+nav a {
+  text-decoration: none;
+}
+
+nav a:link{
+     color: white;
+ }
+ nav a:hover{
+     color: white;
+ }
+ nav a:active{
+     color: white;
+ }
+
+nav {
+  background: #468966;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+}
 nav ul {
   list-style-type: none;
   display: flex;
