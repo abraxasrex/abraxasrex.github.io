@@ -31,12 +31,13 @@ font-size: 0.7em;
   }
 
   .slideshow-frame {
-    height: 300px;
+    height: 350px;
     width: 75%;
     border-style: solid;
     border-width: thin;
     margin: 0 auto;
     z-index: 1;
+    overflow: hidden;
   }
 
 .arrow-right {
@@ -69,21 +70,20 @@ hr {
   height: 3px;
   }
 
-.card, .card-image, .carousel-item {
-  max-width: 100%;
-  padding-bottom:0;
-  }
 
 .carousel-item {
-width: auto;
-padding-bottom:0;
+  max-height: 100%;
+  max-width: 100%;
 display: none;
 }
 
-.card-image img {
-  height: 35%;
+.inner-tile {
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  right: 0;
 }
-
 .hidden {
   display:none;
 }
@@ -220,10 +220,46 @@ article {
     width: 30%;
   }
 
-  footer, .testimonial, .carousel-section {
+  footer, .testimonial{
     margin-top: 50px;
   }
 
   .shown {
     display: block;
   }
+
+#item1 {
+  background-image:url("img/cardling.jpg");
+}
+
+#item2 {
+  background-image:url("img/reverse_wav.jpg");
+}
+
+#item3 {
+  background-image:url("img/place_drop.png");
+}
+
+#item4 {
+  background-image:url("img/hungr.png");
+}
+
+#item5 {
+  background-image:url("img/datamap.png");
+}
+
+#item6 {
+  background-image:url("img/simon.png");
+}
+
+#item7 {
+  background-image:url("img/minimal.png");
+}
+
+#item8 {
+  background-image:url("img/selfcinema.jpg");
+}
+
+#item9 {
+  background-image:url("img/donegone.png");
+}

@@ -1,11 +1,9 @@
 var portfolioItems = document.getElementsByClassName('carousel-item');
 var leftArrow = document.getElementsByClassName('arrow-left')[0];
 var rightArrow = document.getElementsByClassName('arrow-right')[0];
-console.log(portfolioItems);
 var current = 0;
 
 function updateCarousel(){
-  console.log('updated carousel');
   for(var i = 0; i < portfolioItems.length; i++){
     portfolioItems[i].classList.remove('shown');
   }
