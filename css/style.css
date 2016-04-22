@@ -228,38 +228,38 @@ article {
     display: block;
   }
 
-#item1 {
+.item1 {
   background-image:url("img/cardling.jpg");
 }
 
-#item2 {
+.item2 {
   background-image:url("img/reverse_wav.jpg");
 }
 
-#item3 {
+.item3 {
   background-image:url("img/place_drop.png");
 }
 
-#item4 {
+.item4 {
   background-image:url("img/hungr.png");
 }
 
-#item5 {
+.item5 {
   background-image:url("img/datamap.png");
 }
 
-#item6 {
+.item6 {
   background-image:url("img/simon.png");
 }
 
-#item7 {
+.item7 {
   background-image:url("img/minimal.png");
 }
 
-#item8 {
+.item8 {
   background-image:url("img/selfcinema.jpg");
 }
 
-#item9 {
+.item9 {
   background-image:url("img/donegone.png");
 }
