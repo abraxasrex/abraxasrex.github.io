@@ -78,8 +78,49 @@ var projects = {
     }
   ]
 };
-var socialMediaArray = [];
-var allProjectTags = [];
+var socialMedias = {
+  list: [
+    {
+      name: 'Github',
+      link:'https://github.com/abraxasrex'
+    },
+    {
+      name: 'LinkedIn',
+      link:'https://www.linkedin.com/in/jonathan-reasor-16966352'
+    },
+    {
+      name: 'Devpost',
+      link:'http://devpost.com/jbreasor'
+    },
+    {
+      name: 'F.C.C.',
+      link:'http://www.freecodecamp.com/abraxasrex'
+    },
+    {
+      name:'Codepen',
+      link:'http://codepen.io/jbreasor/'
+    },
+    {
+      name:'Codecademy',
+      link:'https://www.codecademy.com/davidbowie89'
+    },
+    {
+      name:'Wordpress',
+      link:'https://mindbodyscissors.wordpress.com/2015/10/19/meteor-js-through-the-lens-of-a-junior-dev/'
+    },
+    {
+      name:'StackOverFlow',
+      link:'http://stackoverflow.com/users/5258815/jonathan-reasor'
+    },
+    {
+      name:'NPM',
+      link:''
+    },
+    {
+      name:'BandCamp',
+      link:''
+    }
+  ]};
 
 function Project(name, img, description, tags, githubLink, liveLink){
   this.name = name;

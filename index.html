@@ -17,11 +17,11 @@
  <header>
   <nav>
       <ul>
-          <li id="home"><a id="logo-container" href="#" class="brand"><span id="logo-small">portfolio</span> ({ jonathan.reasor })</a></li>
-          <li id="gallery"><a href="#">Gallery</a></li>
-          <li id="about"><a href="#">About</a></li>
-          <li id="links"><a href="#">Links</a></li>
-          <li id="animate"><a href="#">Bubbles</a></li>
+          <li id="nav-home"><a id="logo-container" href="#" class="brand"><span id="logo-small">portfolio</span> ({ jonathan.reasor })</a></li>
+          <li id="nav-gallery"><a href="#">Gallery</a></li>
+          <li id="nav-about"><a href="#">About</a></li>
+          <li id="nav-links"><a href="#">Links</a></li>
+          <li id="nav-animate"><a href="#">Toggle Animation</a></li>
       </ul>
   </nav>
 </header>
@@ -29,212 +29,18 @@
     <h1> Featured Projects </h1>
     <div class="slideshow-frame">
 
-<!-- template for items -->
+<!-- template for items (use background-image ) -->
 
     <div class="carousel-item">
-        <img src="img/place_drop.png">
-        <div class="inner-tile">
         <span class="card-title">PlaceDrop</span>
-        <p> Create customized notes and markers on a local map and plan your daily route. Powered by the Google Maps API, this project grew out of my team's entry in Expedia's February 2016 hackathon.  </p>
-
-        <a href="abraxasrex.github.io/placedrop/index.html" target="_blank">Check it Live</a>
-        <a href="https://github.com/abraxasrex/abraxasrex.github.io/tree/master/placedrop">Fork on Github</a>
-
-      <div class="chip">
-         Self-initiated
+        <p></p>
+      <div class="append-links">
       </div>
-      <div class="chip">
-         Angular.js
+      <div class="append-tags">
       </div>
-      <div class="chip">
-         Google Maps API
-      </div>
-    </div>
   </div>
 
  <!-- template for items -->
-
-          <div class="carousel-item">
-          <div class="card">
-            <div class="card-image">
-              <img src="img/hungr.png">
-              <span class="card-title cyan darken-1 white-text">Hungr</span>
-            </div>
-            <div class="card-content">
-              <p> Maybe you should cook dinner tonight. Maybe you should eat out. Maybe this app will
-              help you decide? It utilizes the Foursquare and Food2Fork APIs to compare all your delicious options.</p>
-            </div>
-            <div class="card-action">
-              <a href="http://hungrapp.meteor.com" target="_blank">Check it Live</a>
-              <a href="https://github.com/abraxasrex/hungr" >Fork on Github</a>
-            </div>
-            <div class="chip">
-               Self-initiated
-            </div>
-            <div class="chip">
-               Meteor.js
-            </div>
-            <div class="chip">
-              Angular.js
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m7 carousel-item">
-        <div class="card">
-          <div class="card-image">
-            <img src="img/datamap.png">
-            <span class="card-title cyan darken-1 white-text">Climate Change Datamap</span>
-          </div>
-          <div class="card-content">
-            <p> D3.js-powered visualization of climate change in the 20th century. Select a range of years to discover the relative
-            impact of global warming in a given region. </p>
-          </div>
-          <div class="card-action">
-            <a href="http://GCCMAP.meteor.com">Check it Live</a>
-            <a href="https://github.com/abraxasrex/GCC_MAP">Fork on Github</a>
-          </div>
-          <div class="chip">
-             Self-initiated
-          </div>
-          <div class="chip">
-             d3.js
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m7 carousel-item">
-      <div class="card">
-        <div class="card-image">
-          <img src="img/minimal.png">
-          <span class="card-title cyan darken-1 white-text"> Minimal Voting</span>
-        </div>
-        <div class="card-content">
-          <p> Create customized polls, vote on the polls of others, and share your favorites with your friends.
-          A basejump project for Free Code Camp.  </p>
-        </div>
-        <div class="card-action">
-          <a href="http://minimal-voting.herokuapp.com">Check it Live</a>
-          <a href="https://github.com/abraxasrex/minimal-voting">Fork on Github</a>
-        </div>
-        <div class="chip">
-          Meteor.js
-        </div>
-        <div class="chip">
-           Free Code Camp
-        </div>
-      </div>
-    </div>
-
-    <div class="col s12 m7 carousel-item">
-    <div class="card">
-      <div class="card-image">
-        <img src="img/selfcinema.jpg">
-        <span class="card-title cyan darken-1 white-text"> SelfCinema</span>
-      </div>
-      <div class="card-content">
-        <p> An app for organizing, or finding and attending local film screenings. I would pitch it
-        as "an anonymous version of meetup.com, exclusively for screening parties." </p>
-      </div>
-      <div class="card-action">
-        <a href="http://selfcinema.meteor.com">Check it Live</a>
-        <a href="https://github.com/abraxasrex/selfcinema">Fork on Github</a>
-      </div>
-      <div class="chip">
-        Meteor.js
-      </div>
-      <div class="chip">
-         Self-initiated
-      </div>
-      <div class="chip">
-         Google Maps API
-      </div>
-    </div>
-  </div>
-
-    <div class="col s12 m7 carousel-item">
-    <div class="card">
-      <div class="card-image">
-        <img src="img/niteplanr.png">
-        <span class="card-title cyan darken-1 white-text">Niteplanr</span>
-      </div>
-      <div class="card-content">
-        <p> A single page app for finding out how many of your friends are going to same bar as yourself.
-        Full stack project for Free Code Camp's Basejump challenges. Created in 2015 alongside <a href="
-https://www.linkedin.com/in/benjamin-linn-361b1180">Benjamin Linn.</a></p>
-      </div>
-      <div class="card-action">
-        <a href="http://niteplanr.meteor.com/">Check it Live</a>
-        <a href="https://github.com/abraxasrex/nightlife-app-1">Fork on Github</a>
-      </div>
-
-      <div class="chip">
-         Free Code Camp
-      </div>
-      <div class="chip">
-         Meteor.js
-      </div>
-    </div>
-    </div>
-
-    <div class="col s12 m7 carousel-item">
-    <div class="card">
-      <div class="card-image">
-        <img src="img/donegone.png">
-        <span class="card-title cyan darken-1 white-text">DoneGone Music Blog</span>
-      </div>
-      <div class="card-content">
-        <p> This is a personal project to create a music, arts, culture blog.
-        Making this site helped me learn the ins and outs of angular's html directives. </p>
-      </div>
-      <div class="card-action">
-        <a href="http://donegone.tk/blog/">Check it Live</a>
-      </div>
-      <div class="chip">
-         Self-initiated
-      </div>
-      <div class="chip">
-         Angular.js
-      </div>
-    </div>
-    </div>
-
-      <div class="col s12 m7 carousel-item">
-      <div class="card">
-        <div class="card-image">
-          <span class="card-title cyan darken-1 white-text">Calculator.js</span>
-        </div>
-        <div class="card-content">
-          <p> It's a fully-functional javascript calculator! </p>
-        </div>
-        <div class="card-action">
-          <a href="http://codepen.io/jbreasor/pen/EPdjyw">Check it Live</a>
-        </div>
-        <div class="chip">
-           Free Code Camp
-        </div>
-      </div>
-    </div>
-
-
-  <div class="col s12 m7 carousel-item">
-  <div class="card">
-    <div class="card-image">
-      <img src="img/simon.png">
-      <span class="card-title cyan darken-1 white-text">Simon Says</span>
-    </div>
-    <div class="card-content">
-      <p> The classic game of Simon, only in Javascript.</p>
-    </div>
-    <div class="card-action">
-      <a href="http://codepen.io/jbreasor/full/pjvGGP/">Check it Live</a>
-    </div>
-    <div class="chip">
-       Free Code Camp
-    </div>
-  </div>
-</div>
 
     </div>
     <span class="arrow-line">
@@ -277,8 +83,7 @@ https://www.linkedin.com/in/benjamin-linn-361b1180">Benjamin Linn.</a></p>
               Currently teaching middle schoolers coding, minecraft and more at the Jane Addams YMCA middle school program.
               Applies that same exploratory and adventurous attitude to developing new software.</p>
           </article>
-
-  </section>
+</section>
 <hr>
   <footer>
     <section class="bio">

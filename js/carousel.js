@@ -1,11 +1,11 @@
-var portfolioItems = document.getElementsByClassName('carousel-item');
+var projects = projects;
 var leftArrow = document.getElementsByClassName('arrow-left')[0];
 var rightArrow = document.getElementsByClassName('arrow-right')[0];
 var current = 0;
 
 function updateCarousel(){
-  for(var i = 0; i < portfolioItems.length; i++){
-    portfolioItems[i].classList.remove('shown');
+  for(var i = 0; i < projects.list.length; i++){
+    projects.list[i];
   }
   portfolioItems[current].classList.add('shown');
 }

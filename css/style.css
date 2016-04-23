@@ -70,20 +70,12 @@ hr {
   height: 3px;
   }
 
-
 .carousel-item {
-  max-height: 100%;
-  max-width: 100%;
-display: none;
+  height: 100%;
+  width: 100%;
+  display: none;
 }
 
-.inner-tile {
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  top: 0;
-  right: 0;
-}
 .hidden {
   display:none;
 }
