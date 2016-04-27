@@ -137,5 +137,3 @@ function SocialMedia(name, img, link){
   this.img = img;
   this.link = link;
 }
-
-createRiver();

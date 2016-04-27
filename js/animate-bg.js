@@ -1,24 +1,10 @@
-var createRiver = function(minFontSize, maxFontSize, userColor, containerWidth, containerHeight, codeStrings){
-
-if(typeof minFontSize !== 'number' || typeof maxFontSize !== 'number'){
-minFontSize = 10;
-maxFontSize = 25;
-console.log('sorry, your font input was not a number. I set it for you.');
-}
-
-if(typeof containerWidth !== 'number' || typeof containerHeight !== 'number'){
- containerWidth = 700;
- containerHeight = 300;
- console.log('sorry, your container input was not a number. I set it for you.')
-}
-
-if(typeof userColor !== 'string'){
-  userColor = 'black';
-  console.log('sorry, color should be a string! I set it for you.')
-}
-
-if(!Array.isArray(codeStrings)){
-  codeStrings = [
+var animate = true;
+var minFontSize = 10;
+var maxFontSize = 25;
+var userColor = '#587895';
+var containerWidth = 1500;
+var containerHeight = 450;
+  var codeStrings = [
     '(function(){a=b})(),a=a)',
     'a=a=b',
     'for(vari=0;i<arr.length;i++)',
@@ -32,14 +18,9 @@ if(!Array.isArray(codeStrings)){
     '01001',
     '0110010110'
   ];
-  console.log('sorry, ur input was not an array. I set it for you.');
-}
 
 var riverContainer = document.getElementById('river-container');
 var parentWidth = riverContainer.style.width;
-function formatContainer(){
-  riverContainer.style.overflow = 'hidden';
-}
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -56,6 +37,12 @@ function jsAnimate(){
      }
     }
   }
+  if (animate === true){
+    setTimeout(jsAnimate, 25);
+  } else {
+    riverContainer.innerHTML = '';
+    return;
+  }
 }
 
 function loopAnim (){
@@ -65,7 +52,7 @@ function loopAnim (){
   var randomI = getRandom(0, codeStrings.length - 1);
   p.textContent = codeStrings[randomI];
   p.style.fontSize = randomSize + 'px';
-  p.style.top = randomY + 'px';
+  p.style.top = randomY + maxFontSize + 'px';
   p.style.color = userColor;
   p.style.left = '10px';
   p.style.background = 'rgba(0,0,0,0)';
@@ -75,20 +62,26 @@ function loopAnim (){
   p.style.opacity = Math.random();
   p.classList.add('code-piece');
   riverContainer.appendChild(p);
-  if (animate ===1){
+
+  if (animate === true){
     setTimeout(loopAnim, 1500);
   } else {
-
+    riverContainer.innerHTML = '';
+    return;
   }
 }
-
-formatContainer();
-loopAnim(); //1500
-jsAnimate(); //25
-}
-
-createRiver('n','n', '#587895', 1500, 450, 'n');
+var createRiver = function(){
+loopAnim();
+jsAnimate();
+};
 
 document.getElementById('nav-animate').addEventListener('click', function(){
-  if(animate =)
+  if(animate === true){
+    animate = false;
+  } else {
+    animate = true;
+    createRiver();
+  }
 });
+
+createRiver();
