@@ -32,7 +32,7 @@ var projects = {
     {
       name:'Placedrop',
       description:'Create customized notes and markers on a local map and plan your daily route. Powered by the Google Maps API, this project grew out of my team\'s entry in Expedia\'s February 2016 hackathon.',
-      img:'img/placedrop.jpg',
+      img:'img/place_drop.png',
       tags:[angular, google_api, hackathon],
       githubLink:'https://github.com/abraxasrex/abraxasrex.github.io/tree/master/placedrop',
       liveLink:'abraxasrex.github.io/placedrop/index.html'
@@ -40,7 +40,7 @@ var projects = {
     {
       name:'Hungr',
       description:'Maybe you should cook dinner tonight. Maybe you should eat out. Maybe this app will help you decide? It utilizes the Foursquare and Food2Fork APIs to compare all your delicious options.',
-      img:'img/hungr.jpg',
+      img:'img/hungr.png',
       tags:[angular, meteor, foursquare_api, full_stack],
       githubLink:'https://github.com/abraxasrex/hungr',
       liveLink:'http://hungrapp.meteor.com'
@@ -50,7 +50,7 @@ var projects = {
       description:'D3.js-powered visualization of climate change in the 20th century. Select a range of years to discover the relative impact of global warming in a given region.',
       githubLink:'https://github.com/abraxasrex/GCC_MAP',
       liveLink:'http://GCCMAP.meteor.com',
-      img:''
+      img:'img/datamap.png'
     },
     {
       name:'Super Simon Says',
@@ -58,7 +58,7 @@ var projects = {
       tags:[fcc],
       githubLink:'',
       liveLink:'http://codepen.io/jbreasor/full/pjvGGP/',
-      img:''
+      img:'img/simon.png'
     },
     {
       name:'Minimal Polls',
@@ -66,7 +66,7 @@ var projects = {
       tags:[meteor, fcc, full_stack],
       githubLink:'https://github.com/abraxasrex/minimal-voting',
       liveLink:'http://minimal-voting.herokuapp.com',
-      img:''
+      img:'img/minimal.png'
     },
     {
       name:'SelfCinema',
@@ -74,7 +74,7 @@ var projects = {
       tags:[meteor, full_stack],
       githubLink:'https://github.com/abraxasrex/selfcinema',
       liveLink:'http://selfcinema.meteor.com',
-      img:''
+      img:'img/selfcinema.jpg'
     }
   ]
 };

@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script src="js/model.js"></script>
-    <script src = "js/carousel.js"></script>
 </head>
 <body>
  <header>
@@ -27,12 +26,14 @@
 
 <!-- template for items (use background-image ) -->
 
-    <div class="carousel-item">
-        <span class="card-title">PlaceDrop</span>
-        <p></p>
+    <div class="carousel-item" id="item-container">
+        <span class="card-title" id="item-title">PlaceDrop</span>
+        <p id="item-info"></p>
       <div class="append-links">
+        <span id="github-link"></span>
+        <span id="live-link"></span>
       </div>
-      <div class="append-tags">
+      <div class="append-tags" id="item-tags">
       </div>
   </div>
 
@@ -165,6 +166,7 @@
                 </div>
         </section>
   </footer>
+      <script src = "js/carousel.js"></script>
     <script src="js/animate-bg.js"></script>
   </body>
 </html>

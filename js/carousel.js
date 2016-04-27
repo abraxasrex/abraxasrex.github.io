@@ -1,13 +1,18 @@
 var projects = projects;
 var leftArrow = document.getElementsByClassName('arrow-left')[0];
 var rightArrow = document.getElementsByClassName('arrow-right')[0];
-var current = 0;
+var current = 2;
+var itemTitle = document.getElementById('item-title');
+var itemInfo = document.getElementById('item-info');
+var githubLink = document.getElementById('github-link');
+var liveLink = document.getElementById('live-link');
+var itemTags = document.getElementById('item-tags');
+var itemContainer = document.getElementById('item-container');
 
 function updateCarousel(){
-  for(var i = 0; i < projects.list.length; i++){
-    projects.list[i];
-  }
-  portfolioItems[current].classList.add('shown');
+  //container, title, info, links, tags
+  itemTitle.textContent = projects.list[current].name;
+  itemContainer.style.backgroundImage = 'url(' + projects.list[current].img + ')';
 }
 
 function cycleLeft(){
