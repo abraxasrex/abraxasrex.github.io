@@ -12,20 +12,21 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://cdn.rawgit.com/abraxasrex/river-of-text/master/river.js"></script>
 </head>
 <body>
  <header>
   <nav>
       <ul>
           <li id="nav-home"><a id="logo-container" href="#" class="brand"><span id="logo-small">portfolio</span> ({ jonathan.reasor })</a></li>
-          <li id="nav-gallery"><a href="#">Gallery</a></li>
-          <li id="nav-about"><a href="#">About</a></li>
-          <li id="nav-links"><a href="#">Links</a></li>
-          <li id="nav-animate"><a href="#">Toggle Animation</a></li>
+          <li id="nav-about"><a href="#about">About</a></li>
+          <li id="nav-links"><a href="#bio">Links</a></li>
+          <li id="nav-animate"><a href="#sup?">Toggle Animation</a></li>
       </ul>
   </nav>
 </header>
   <section class="carousel-section">
+      <div class="bg" id="river-container"></div>
     <h1> Featured Projects </h1>
     <div class="slideshow-frame">
 
@@ -49,7 +50,7 @@
     </span>
 </section>
 <hr>
-  <section class="testimonial">
+  <section class="testimonial" id="about">
       <article>
             <h2 class="center orange-text"><i class="material-icons">verified_user</i></h2>
             <h5 class="center">Certified for Front End Development</h5>
@@ -86,7 +87,7 @@
 </section>
 <hr>
   <footer>
-    <section class="bio">
+    <section class="bio" id="bio">
           <div class="img-container">
             <img src="img/linkedin2.jpg">
           </div>
@@ -169,6 +170,7 @@
                 </div>
         </section>
   </footer>
-    <script src = "js/carousel.js"></script>
+    <script src="js/animate-bg.js"></script>
+  <!--  <script src = "js/carousel.js"></script> -->
   </body>
 </html>

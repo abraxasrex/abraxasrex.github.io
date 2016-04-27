@@ -7,10 +7,25 @@ blue #587895
 */
 
 body {
-  min-width: 500px;
   margin: 0 auto;
-  background: #f4f1f2;
+  background: rgba(0,0,0,0);
+  transition: all 2s;
     }
+
+.bg {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+    background: #f4f1f2;
+  width: 100%;
+  min-height: 1500px;
+  z-index: -1;
+}
+
+.bg > p{
+
+}
 
 #logo-container {
   font-size: 2.2em;
@@ -206,6 +221,11 @@ article {
     flex-flow: wrap;
     max-width: 100%;
     margin-bottom: 100px;
+    z-index: -1;
+  }
+
+  .testimonial > p{
+    z-index: -2;
   }
 
   .testimonial article {

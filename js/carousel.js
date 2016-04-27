@@ -34,3 +34,10 @@ leftArrow.addEventListener('click', cycleLeft);
 rightArrow.addEventListener('click', cycleRight);
 
 updateCarousel();
+
+document.getElementById('nav-about').addEventListener('click', function(){
+  document.body.scrollTop = document.getElementById('about').offsetTop;
+})
+document.getElementById('nav-links').addEventListener('click', function(){
+    document.body.scrollTop = document.getElementById('about').offsetTop;
+})
