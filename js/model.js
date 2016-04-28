@@ -1,15 +1,3 @@
-var fcc;
-var hackathon;
-var mean;
-var meteor;
-var angular;
-var google_api;
-var foursquare_api;
-var d3_js;
-var node_js;
-var mobile_app;
-var full_stack;
-var express;
 
 var projects = {
   list:[
@@ -17,7 +5,7 @@ var projects = {
       name:'cardling',
       description:'Create and keep track of media-based flashcards that help you learn or practice vocabulary.',
       img:'img/cardling.jpg',
-      tags: [mean, full_stack, mobile_app],
+      tags: ['MEAN stack', 'mobile'],
       githubLink: '',
       liveLink: ''
     },
@@ -25,7 +13,7 @@ var projects = {
       name:'node reverse .wav',
       description:'Upload, reverse, and download .wav files. Powered by Node.js',
       img:'img/node_reverse.jpg',
-      tags:[node_js, express, full_stack],
+      tags:['node.js', 'express'],
       githubLink:'',
       liveLink:''
     },
@@ -33,7 +21,7 @@ var projects = {
       name:'Placedrop',
       description:'Create customized notes and markers on a local map and plan your daily route. Powered by the Google Maps API, this project grew out of my team\'s entry in Expedia\'s February 2016 hackathon.',
       img:'img/place_drop.png',
-      tags:[angular, google_api, hackathon],
+      tags:['angular', 'google APIs', 'hackathon'],
       githubLink:'https://github.com/abraxasrex/abraxasrex.github.io/tree/master/placedrop',
       liveLink:'abraxasrex.github.io/placedrop/index.html'
     },
@@ -41,7 +29,7 @@ var projects = {
       name:'Hungr',
       description:'Maybe you should cook dinner tonight. Maybe you should eat out. Maybe this app will help you decide? It utilizes the Foursquare and Food2Fork APIs to compare all your delicious options.',
       img:'img/hungr.png',
-      tags:[angular, meteor, foursquare_api, full_stack],
+      tags:['angular', 'meteor', 'Foursquare API'],
       githubLink:'https://github.com/abraxasrex/hungr',
       liveLink:'http://hungrapp.meteor.com'
     },
@@ -50,12 +38,13 @@ var projects = {
       description:'D3.js-powered visualization of climate change in the 20th century. Select a range of years to discover the relative impact of global warming in a given region.',
       githubLink:'https://github.com/abraxasrex/GCC_MAP',
       liveLink:'http://GCCMAP.meteor.com',
-      img:'img/datamap.png'
+      img:'img/datamap.png',
+      tags:['d3.js']
     },
     {
       name:'Super Simon Says',
       description:'A customizable variation on the classic memory game',
-      tags:[fcc],
+      tags:['FreeCodeCamp'],
       githubLink:'',
       liveLink:'http://codepen.io/jbreasor/full/pjvGGP/',
       img:'img/simon.png'
@@ -63,7 +52,7 @@ var projects = {
     {
       name:'Minimal Polls',
       description:'Create customized polls, vote on the polls of others, and share your favorites with your friends. A basejump project for Free Code Camp.',
-      tags:[meteor, fcc, full_stack],
+      tags:['meteor', 'FreeCodeCamp'],
       githubLink:'https://github.com/abraxasrex/minimal-voting',
       liveLink:'http://minimal-voting.herokuapp.com',
       img:'img/minimal.png'
@@ -71,7 +60,7 @@ var projects = {
     {
       name:'SelfCinema',
       description:'An app for organizing, or finding and attending local film screenings. I would pitch it as "an anonymous version of meetup.com, exclusively for screening parties.',
-      tags:[meteor, full_stack],
+      tags:['meteor'],
       githubLink:'https://github.com/abraxasrex/selfcinema',
       liveLink:'http://selfcinema.meteor.com',
       img:'img/selfcinema.jpg'
@@ -114,11 +103,7 @@ var socialMedias = {
     },
     {
       name:'NPM',
-      link:''
-    },
-    {
-      name:'BandCamp',
-      link:''
+      link:'https://www.npmjs.com/~abraxasrex'
     }
   ]};
 

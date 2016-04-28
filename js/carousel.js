@@ -12,7 +12,16 @@ var itemContainer = document.getElementById('item-container');
 function updateCarousel(){
   //container, title, info, links, tags
   itemTitle.textContent = projects.list[current].name;
+  itemInfo.textContent = projects.list[current].description;
   itemContainer.style.backgroundImage = 'url(' + projects.list[current].img + ')';
+  itemTags.innerHTML = '';
+  for(var i = 0; i < projects.list[current].tags; i++){
+    var div = createElement('div');
+    div.textContent = project.list[current].tags[i];
+    itemTags.appendChild(div);
+  }
+  liveLink.textContent = projects.list[current].liveLink;
+  githubLink.textContent = projects.list[current].githubLink;
 }
 
 function cycleLeft(){
