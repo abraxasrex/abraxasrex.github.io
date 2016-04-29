@@ -2,22 +2,6 @@
 var projects = {
   list:[
     {
-      name:'cardling',
-      description:'Create and keep track of media-based flashcards that help you learn or practice vocabulary.',
-      img:'img/cardling.jpg',
-      tags: ['MEAN stack', 'mobile'],
-      githubLink: '',
-      liveLink: ''
-    },
-    {
-      name:'node reverse .wav',
-      description:'Upload, reverse, and download .wav files. Powered by Node.js',
-      img:'img/node_reverse.jpg',
-      tags:['node.js', 'express'],
-      githubLink:'',
-      liveLink:''
-    },
-    {
       name:'Placedrop',
       description:'Create customized notes and markers on a local map and plan your daily route. Powered by the Google Maps API, this project grew out of my team\'s entry in Expedia\'s February 2016 hackathon.',
       img:'img/place_drop.png',
@@ -122,3 +106,22 @@ function SocialMedia(name, img, link){
   this.img = img;
   this.link = link;
 }
+
+var wip_projects = [
+  {
+    name:'cardling',
+    description:'Create and keep track of media-based flashcards that help you learn or practice vocabulary.',
+    img:'img/cardling.jpg',
+    tags: ['MEAN stack', 'mobile'],
+    githubLink: '',
+    liveLink: ''
+  },
+  {
+    name:'node reverse .wav',
+    description:'Upload, reverse, and download .wav files. Powered by Node.js',
+    img:'img/node_reverse.jpg',
+    tags:['node.js', 'express'],
+    githubLink:'',
+    liveLink:''
+  }
+];

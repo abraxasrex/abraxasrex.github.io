@@ -88,6 +88,11 @@ hr {
 .carousel-item {
   height: 100%;
   width: 100%;
+  background-position: 0px 0px;
+  background-size: cover;
+}
+.portfolio_blurb {
+
 }
 
 .hidden {
