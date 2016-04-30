@@ -3,20 +3,22 @@ var minFontSize = 10;
 var maxFontSize = 25;
 var userColor = '#587895';
 var containerWidth = 1500;
-var containerHeight = 450;
+var containerHeight = 700;
   var codeStrings = [
     '(function(){a=b})(),a=a)',
     'a=a=b',
     'for(vari=0;i<arr.length;i++)',
-    'if(cat="orange"){lasagna.eat}',
+    'if(cat==="orange"){lasagna.eat}',
     'typeof NaN==="number"',
     '5!=="5"',
     '7=="7"',
-    '[{prp:0},{prp:1}]',
+    '[{key1:0},{key2:1}]',
     '!(x!==y)||false',
     'o[p].q>=r+s',
     '01001',
-    '0110010110'
+    '0110010110',
+    '[10001,0111,01011]',
+    '!!parseInt("24")%8==0'
   ];
 
 var riverContainer = document.getElementById('river-container');
@@ -32,7 +34,7 @@ function jsAnimate(){
     for(var i = 0; i < children.length; i ++){
       children[i].style.left = parseInt(children[i].style.left.slice(0, -2)) + 1.5 + 'px';
 
-      if(parseInt(children[i].style.left.slice(0, -2)) > 1200 || children.length > 25){
+      if(parseInt(children[i].style.left.slice(0, -2)) > 1200 || children.length > 30){
          riverContainer.removeChild(children[i]);
      }
     }
@@ -64,7 +66,7 @@ function loopAnim (){
   riverContainer.appendChild(p);
 
   if (animate === true){
-    setTimeout(loopAnim, 1500);
+    setTimeout(loopAnim, 1250);
   } else {
     riverContainer.innerHTML = '';
     return;

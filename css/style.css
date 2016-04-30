@@ -23,10 +23,13 @@ body {
   z-index: -1;
 }
 
-.bg > p{
-
+.bg, .testimonial, footer, body{
+  background: #f4f1f2;
 }
 
+section {
+  font-family: 'Cousine';
+}
 #logo-container {
   font-size: 2.2em;
   }
@@ -46,7 +49,7 @@ font-size: 0.7em;
   }
 
   .slideshow-frame {
-    height: 350px;
+    height: 425px;
     width: 75%;
     border-style: solid;
     border-width: thin;
@@ -77,12 +80,13 @@ font-size: 0.7em;
   width: 90%;
   display:inline-block;
   position: relative;
-  bottom: 200px;
+  bottom: 250px;
   }
 
 hr {
   background-color: white;
   height: 3px;
+  width: 100%;
   }
 
 .carousel-item {
@@ -103,6 +107,12 @@ height: 66%;
 border-style: solid;
 border-width: thin;
 background: rgba(88, 120, 149, 0.95);
+}
+footer h2{
+  background: #587895;
+  color: white;
+  padding: 10px 0px 10px 0px;
+  transition: all 0.3s;
 }
 
 .hidden {
@@ -168,16 +178,23 @@ article {
 
 .carousel-section {
   text-align: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+
   }
+hr{
+  margin: 50px 0px 50px 0px;
+}
+.carousel-section * {
+
+}
 
   footer {
     display: flex;
     justify-content: space-around;
     flex-flow: wrap;
     height: 400px;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-top: 50px;
   }
@@ -187,16 +204,22 @@ article {
 }
 
 .bio article {
-  width: 50%;
+  width: 45%;
   float: right;
   height: 75%;
   padding-top:0px;
+  border-style: solid;
+  padding: 5px;
+  border-width: 1px 1px 0px 0px;
   }
 
   .img-container {
-    width: 50%;
+    width: 45%;
     float: left;
-    height: 67.5%;
+    height: 75%;
+    border-style: solid;
+    padding: 5px 5px 5px 10px;
+    border-width: 0px 0px 1px 1px;
   }
 
   .bio img {
@@ -222,6 +245,9 @@ article {
   width: 5em;
   height: 5em;
   margin: 1em;
+  border-style: solid;
+  border-width: 1px 0px 0px 1px;
+  padding: 5px 5px 15px 5px;
   }
 
   .papertrail-item img {
@@ -233,6 +259,7 @@ article {
     display: flex;
     justify-content: space-around;
     flex-flow: wrap;
+    align-items: flex-start;
     max-width: 100%;
     margin-bottom: 100px;
     z-index: -1;
@@ -243,7 +270,12 @@ article {
   }
 
   .testimonial article {
-    width: 30%;
+    width: 45%;
+  }
+
+  .testimonial article:nth-of-type(1){
+    width: 60%;
+    margin: 0 auto;
   }
 
   footer, .testimonial{
@@ -253,39 +285,16 @@ article {
   .shown {
     display: block;
   }
-
-.item1 {
-  background-image:url("img/cardling.jpg");
+footer a {
+  text-decoration: underline;
 }
+footer a:link {
+     color: black;
+ }
 
-.item2 {
-  background-image:url("img/reverse_wav.jpg");
-}
-
-.item3 {
-  background-image:url("img/place_drop.png");
-}
-
-.item4 {
-  background-image:url("img/hungr.png");
-}
-
-.item5 {
-  background-image:url("img/datamap.png");
-}
-
-.item6 {
-  background-image:url("img/simon.png");
-}
-
-.item7 {
-  background-image:url("img/minimal.png");
-}
-
-.item8 {
-  background-image:url("img/selfcinema.jpg");
-}
-
-.item9 {
-  background-image:url("img/donegone.png");
-}
+ footer a:active {
+     color: black;
+ }
+ footer a:visited {
+   color: black;
+ }
