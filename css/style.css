@@ -90,9 +90,19 @@ hr {
   width: 100%;
   background-position: 0px 0px;
   background-size: cover;
+  position: relative;
 }
-.portfolio_blurb {
 
+.portfolio_blurb {
+  padding: 5px;
+  position: absolute;
+top: 5px;
+right: 5px;
+width: 50%;
+height: 66%;
+border-style: solid;
+border-width: thin;
+background: rgba(88, 120, 149, 0.95);
 }
 
 .hidden {
