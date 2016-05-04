@@ -15,13 +15,13 @@ function updateCarousel(){
   itemInfo.textContent = projects.list[current].description;
   itemContainer.style.backgroundImage = 'url(' + projects.list[current].img + ')';
   itemTags.innerHTML = '';
-  for(var i = 0; i < projects.list[current].tags; i++){
-    var div = createElement('div');
-    div.textContent = project.list[current].tags[i];
+  for(var i = 0; i < projects.list[current].tags.length; i++){
+    var div = document.createElement('div');
+    div.textContent = projects.list[current].tags[i];
     itemTags.appendChild(div);
   }
-  liveLink.textContent = projects.list[current].liveLink;
-  githubLink.textContent = projects.list[current].githubLink;
+  liveLink.children[0].href = projects.list[current].liveLink;
+  githubLink.children[0].href = projects.list[current].githubLink;
 }
 
 function cycleLeft(){

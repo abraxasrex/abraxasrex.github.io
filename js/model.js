@@ -15,13 +15,13 @@ var projects = {
       img:'img/hungr.png',
       tags:['angular', 'meteor', 'Foursquare API'],
       githubLink:'https://github.com/abraxasrex/hungr',
-      liveLink:'http://hungrapp.meteor.com'
+      liveLink:'http://hungr-app.herokuapp.com'
     },
     {
       name:'Datamap',
       description:'D3.js-powered visualization of climate change in the 20th century. Select a range of years to discover the relative impact of global warming in a given region.',
       githubLink:'https://github.com/abraxasrex/GCC_MAP',
-      liveLink:'http://GCCMAP.meteor.com',
+      liveLink:'http://climate-datamap.herokuapp.com/',
       img:'img/datamap.png',
       tags:['d3.js']
     },
