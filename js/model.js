@@ -5,15 +5,15 @@ var projects = {
       name:'Placedrop',
       description:'Create customized notes and markers on a local map and plan your daily route. Powered by the Google Maps API, this project grew out of my team\'s entry in Expedia\'s February 2016 hackathon.',
       img:'img/place_drop.png',
-      tags:['angular', 'google APIs', 'hackathon'],
-      githubLink:'https://github.com/abraxasrex/abraxasrex.github.io/tree/master/placedrop',
-      liveLink:'abraxasrex.github.io/placedrop/index.html'
+      tags:['google APIs', 'hackathon', 'MEAN stack'],
+      githubLink:'https://github.com/abraxasrex/placedrop',
+      liveLink:'https://placedrop.herokuapp.com/'
     },
     {
       name:'Hungr',
       description:'Maybe you should cook dinner tonight. Maybe you should eat out. Maybe this app will help you decide? It utilizes the Foursquare and Food2Fork APIs to compare all your delicious options.',
       img:'img/hungr.png',
-      tags:['angular', 'meteor', 'Foursquare API'],
+      tags:['angular.js', 'meteor.js', 'foursquare API'],
       githubLink:'https://github.com/abraxasrex/hungr',
       liveLink:'http://hungr-app.herokuapp.com'
     },
@@ -21,33 +21,33 @@ var projects = {
       name:'Datamap',
       description:'D3.js-powered visualization of climate change in the 20th century. Select a range of years to discover the relative impact of global warming in a given region.',
       githubLink:'https://github.com/abraxasrex/GCC_MAP',
-      liveLink:'http://climate-datamap.herokuapp.com/',
+      liveLink:'http://climate-datamap.herokuapp.com',
       img:'img/datamap.png',
-      tags:['d3.js']
+      tags:['d3.js', 'meteor.js']
     },
     {
-      name:'Super Simon Says',
-      description:'A customizable variation on the classic memory game',
+      name:'wav-reverse(npm)',
+      description: 'A node package that lets you reverse a .wav file.',
+      githubLink:'http://www.npmjs.com/package/reverse-wav',
+      liveLink:'http://www.npmjs.com/package/reverse-wav',
+      img:'https://www.freesound.org/data/displays/181/181129_321967_spec_L.jpg',
+      tags:['node.js', 'audio programming']
+    },
+    {
+      name:'Simon Says',
+      description:'A variation on the classic memory game',
       tags:['FreeCodeCamp'],
-      githubLink:'',
+      githubLink:'#',
       liveLink:'http://codepen.io/jbreasor/full/pjvGGP/',
       img:'img/simon.png'
     },
     {
       name:'Minimal Polls',
       description:'Create customized polls, vote on the polls of others, and share your favorites with your friends. A basejump project for Free Code Camp.',
-      tags:['meteor', 'FreeCodeCamp'],
+      tags:['meteor.js', 'FreeCodeCamp'],
       githubLink:'https://github.com/abraxasrex/minimal-voting',
       liveLink:'http://minimal-voting.herokuapp.com',
       img:'img/minimal.png'
-    },
-    {
-      name:'SelfCinema',
-      description:'An app for organizing, or finding and attending local film screenings. I would pitch it as "an anonymous version of meetup.com, exclusively for screening parties.',
-      tags:['meteor'],
-      githubLink:'https://github.com/abraxasrex/selfcinema',
-      liveLink:'http://selfcinema.meteor.com',
-      img:'img/selfcinema.jpg'
     }
   ]
 };
@@ -91,20 +91,17 @@ var socialMedias = {
     }
   ]};
 
-function Project(name, img, description, tags, githubLink, liveLink){
-  this.name = name;
-  this.img = img;
-  this.description = description;
-  this.tags = tags;
-  this.githubLink = githubLink;
-  this.liveLink = liveLink;
-  projectarray.push(liveLink);
-}
-
-function SocialMedia(name, img, link){
-  this.name = name;
-  this.img = img;
-  this.link = link;
+var tag_colors = {
+  'hackathon': 'Khaki',
+  'google APIs': 'LightSalmon',
+  'MEAN stack': 'Plum',
+  'node.js': 'GreenYellow',
+  'meteor.js': 'MediumAquamarine',
+  'FreeCodeCamp': 'LightSteelBlue',
+  'd3.js': 'Goldenrod',
+  'audio programming': 'FloralWhite',
+  'angular.js': 'Silver',
+  'foursquare API': 'Tomato'
 }
 
 var wip_projects = [
@@ -115,13 +112,5 @@ var wip_projects = [
     tags: ['MEAN stack', 'mobile'],
     githubLink: '',
     liveLink: ''
-  },
-  {
-    name:'node reverse .wav',
-    description:'Upload, reverse, and download .wav files. Powered by Node.js',
-    img:'img/node_reverse.jpg',
-    tags:['node.js', 'express'],
-    githubLink:'',
-    liveLink:''
   }
 ];

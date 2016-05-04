@@ -1,7 +1,7 @@
 var projects = projects;
+var current = 0;
 var leftArrow = document.getElementsByClassName('arrow-left')[0];
 var rightArrow = document.getElementsByClassName('arrow-right')[0];
-var current = 0;
 var itemTitle = document.getElementById('item-title');
 var itemInfo = document.getElementById('item-info');
 var githubLink = document.getElementById('github-link');
@@ -18,10 +18,11 @@ function updateCarousel(){
   for(var i = 0; i < projects.list[current].tags.length; i++){
     var div = document.createElement('div');
     div.textContent = projects.list[current].tags[i];
+    div.style.background = tag_colors[projects.list[current].tags[i]];
     itemTags.appendChild(div);
   }
-  liveLink.children[0].href = projects.list[current].liveLink;
-  githubLink.children[0].href = projects.list[current].githubLink;
+  liveLink.setAttribute('href', projects.list[current].liveLink);
+  githubLink.setAttribute('href', projects.list[current].githubLink);
 }
 
 function cycleLeft(){

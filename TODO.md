@@ -1,12 +1,6 @@
 # todo  
 
-- expand middle section with images and extra text  
-
-- rewrite textual information
-
-- beautify footer + image  
-
-- heroku build past projects
+- mobile view
 
 # stretch  
 
