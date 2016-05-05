@@ -27,18 +27,18 @@ var projects = {
     },
     {
       name:'Simon Says',
-      description:'A variation on the classic memory game',
+      description:'A variation on the classic memory game. A Zipline project in front end development from FreeCodeCamp.com.',
       tags:['FreeCodeCamp'],
       githubLink:'wip',
-      liveLink:'https://codepen.io/jbreasor/full/pjvGGP',
+      liveLink:"https://codepen.io/jbreasor/full/pjvGGP",
       img:'img/simon.png'
     },
     {
       name:'Minimal Polls',
       description:'Create customized polls, vote on the polls of others, and share your favorites with your friends. A basejump project for Free Code Camp.',
       tags:['meteor.js', 'FreeCodeCamp'],
-      githubLink:'https://github.com/abraxasrex/minimal-voting',
-      liveLink:'https://minimal-voting.herokuapp.com',
+      githubLink:"https://github.com/abraxasrex/minimal-voting",
+      liveLink:"https://minimal-voting.herokuapp.com",
       img:'img/minimal.png'
     },
     {
@@ -46,7 +46,7 @@ var projects = {
       description: 'A node package that lets you reverse a .wav file.',
       githubLink:'https://www.npmjs.com/package/reverse-wav',
       liveLink:'https://www.npmjs.com/package/reverse-wav',
-      img:'https://www.freesound.org/data/displays/181/181129_321967_spec_L.jpg',
+      img:"https://www.freesound.org/data/displays/181/181129_321967_spec_L.jpg",
       tags:['node.js', 'audio programming']
     }
   ]
