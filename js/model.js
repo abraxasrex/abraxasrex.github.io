@@ -15,30 +15,22 @@ var projects = {
       img:'img/hungr.png',
       tags:['angular.js', 'meteor.js', 'foursquare API'],
       githubLink:'https://github.com/abraxasrex/hungr',
-      liveLink:'http://hungr-app.herokuapp.com'
+      liveLink:'https://hungr-app.herokuapp.com'
     },
     {
       name:'Datamap',
       description:'D3.js-powered visualization of climate change in the 20th century. Select a range of years to discover the relative impact of global warming in a given region.',
       githubLink:'https://github.com/abraxasrex/GCC_MAP',
-      liveLink:'http://climate-datamap.herokuapp.com',
+      liveLink:'https://climate-datamap.herokuapp.com',
       img:'img/datamap.png',
       tags:['d3.js', 'meteor.js']
-    },
-    {
-      name:'wav-reverse(npm)',
-      description: 'A node package that lets you reverse a .wav file.',
-      githubLink:'http://www.npmjs.com/package/reverse-wav',
-      liveLink:'http://www.npmjs.com/package/reverse-wav',
-      img:'https://www.freesound.org/data/displays/181/181129_321967_spec_L.jpg',
-      tags:['node.js', 'audio programming']
     },
     {
       name:'Simon Says',
       description:'A variation on the classic memory game',
       tags:['FreeCodeCamp'],
-      githubLink:'#',
-      liveLink:'http://codepen.io/jbreasor/full/pjvGGP/',
+      githubLink:'wip',
+      liveLink:'https://codepen.io/jbreasor/full/pjvGGP',
       img:'img/simon.png'
     },
     {
@@ -46,8 +38,16 @@ var projects = {
       description:'Create customized polls, vote on the polls of others, and share your favorites with your friends. A basejump project for Free Code Camp.',
       tags:['meteor.js', 'FreeCodeCamp'],
       githubLink:'https://github.com/abraxasrex/minimal-voting',
-      liveLink:'http://minimal-voting.herokuapp.com',
+      liveLink:'https://minimal-voting.herokuapp.com',
       img:'img/minimal.png'
+    },
+    {
+      name:'wav-reverse(npm)',
+      description: 'A node package that lets you reverse a .wav file.',
+      githubLink:'https://www.npmjs.com/package/reverse-wav',
+      liveLink:'https://www.npmjs.com/package/reverse-wav',
+      img:'https://www.freesound.org/data/displays/181/181129_321967_spec_L.jpg',
+      tags:['node.js', 'audio programming']
     }
   ]
 };

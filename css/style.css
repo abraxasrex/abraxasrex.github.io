@@ -28,9 +28,6 @@ body {
   background: #f4f1f2;
 }
 
-section {
-
-}
 #logo-container {
   font-size: 2.2em;
   }
@@ -114,9 +111,7 @@ hr {
   justify-content: space-around;
 }
 
-.portfolio_blurb a {
 
-}
 
 footer h2{
   background: #587895;
@@ -147,6 +142,7 @@ nav a:link {
  nav a:visited {
    color: white;
  }
+
  /*.append-links a:link {
       color: white;
   }
@@ -307,6 +303,10 @@ padding: 5px;
 margin: 0 auto;
 width: 10%;
 display:inline;
+}
+
+.live-link, .github-link{
+  min-height: 25px;
 }
   .testimonial {
     display: flex;

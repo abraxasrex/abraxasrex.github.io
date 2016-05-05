@@ -2,6 +2,8 @@
 
 - mobile view
 
+- fix anchor tags on 3 models  
+
 # stretch  
 
 - npm .wav web app  
