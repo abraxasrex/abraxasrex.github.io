@@ -31,8 +31,8 @@ function jsAnimate(){
   var children = riverContainer.children;
   if(children.length){
     for(var i = 0; i < children.length; i ++){
-      children[i].style.top = parseInt(children[i].style.top.slice(0, -2)) + 1.8 + 'px';
-      if(parseInt(children[i].style.top.slice(0, -2)) > 1200 || children.length > 25){
+      children[i].style.top = parseInt(children[i].style.top.slice(0, -2)) + 1.5 + 'px';
+      if(parseInt(children[i].style.top.slice(0, -2)) > 3000 || children.length > 25){
          riverContainer.removeChild(children[i]);
      }
     }
@@ -48,19 +48,20 @@ function jsAnimate(){
 function loopAnim (){
   var p = document.createElement('p');
   var randomSize = getRandom(minFontSize, maxFontSize);
-  var randomY = getRandom(0, 1500);
+  var randomX = getRandom(0, 1200);
   var randomI = getRandom(0, codeStrings.length - 1);
   p.textContent = codeStrings[randomI];
   p.style.fontSize = randomSize + 'px';
-  p.style.top = randomY + maxFontSize + 'px';
+  p.style.top = '750px';
   p.style.color = userColor;
-  p.style.left = '10px';
+  p.style.left = randomX + 'px';
   p.style.background = 'rgba(0,0,0,0)';
   p.style.position = 'absolute';
   p.style.margin = '0';
   p.style.padding = '0';
-  p.style.opacity = Math.random();
+  p.style.opacity = 0.5;
   p.classList.add('code-piece');
+  p.style.transform = 'rotate2d(90deg)';
   riverContainer.appendChild(p);
 
   if (animate === true){
