@@ -444,3 +444,79 @@ and (orientation : portrait) {
     font-size: 14px;
   }
 }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 570px)
+and (orientation : portrait) {
+ body {
+   width: 100%;
+ }
+
+ #logo-small{
+   font-size: 8px;
+ }
+ .testimonial article {
+   width: 100%;
+ }
+ .bio {
+   font-size: 12px;
+ }
+ .bio, .papertrail{
+   width: 100%;
+ }
+ .papertrail{
+   height: 600px;
+ }
+ nav li {
+   width: 8%;
+   /*padding-left: 5px;
+   padding-right: 5px;*/
+   word-wrap: break-word;
+   font-size:6px;
+   padding: 0px;
+   margin: 0px;
+ }
+ nav li:nth-of-type(1){
+   width: 55%;
+   text-align: left;
+   padding-left: 3px;
+ }
+ nav li:nth-of-type(4){
+  width: 20%;
+  text-align: left;
+  vertical-align: middle;
+ }
+ .animate-a{
+   display: block;
+   width: 100%;
+   height: 100%;
+   font-size: 6px;
+ }
+ nav ul {
+   padding: 0;
+ }
+ .brand {
+   font-size: 10px;
+   max-height: 100%;
+   max-width: 100%;
+   width: 100%;
+   line-height:25px;
+   height: 25px;
+ }
+ .portfolio_blurb{
+   font-size: 8px;
+ }
+ .append-tags{
+   margin: 0 auto;
+   width: 75%;
+ }
+ .append-tags > div{
+   width: 75%;
+   float: left;
+ }
+ .testimonial article {
+   width: 75%;
+   font-size: 12px;
+ }
+}
