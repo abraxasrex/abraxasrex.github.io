@@ -1,9 +1,7 @@
 var animate = true;
-var minFontSize = 10;
-var maxFontSize = 25;
+var minFontSize = 15;
+var maxFontSize = 28;
 var userColor = '#587895';
-var containerWidth = 1500;
-var containerHeight = 700;
   var codeStrings = [
     '(function(){a=b})(),a=a)',
     'a=a=b',
@@ -23,6 +21,7 @@ var containerHeight = 700;
 
 var riverContainer = document.getElementById('river-container');
 var parentWidth = riverContainer.style.width;
+var containerHeight = 650;
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -32,9 +31,8 @@ function jsAnimate(){
   var children = riverContainer.children;
   if(children.length){
     for(var i = 0; i < children.length; i ++){
-      children[i].style.left = parseInt(children[i].style.left.slice(0, -2)) + 1.5 + 'px';
-
-      if(parseInt(children[i].style.left.slice(0, -2)) > 1200 || children.length > 30){
+      children[i].style.top = parseInt(children[i].style.top.slice(0, -2)) + 1.8 + 'px';
+      if(parseInt(children[i].style.top.slice(0, -2)) > 1200 || children.length > 25){
          riverContainer.removeChild(children[i]);
      }
     }
@@ -50,7 +48,7 @@ function jsAnimate(){
 function loopAnim (){
   var p = document.createElement('p');
   var randomSize = getRandom(minFontSize, maxFontSize);
-  var randomY = getRandom(0, containerHeight);
+  var randomY = getRandom(0, 1500);
   var randomI = getRandom(0, codeStrings.length - 1);
   p.textContent = codeStrings[randomI];
   p.style.fontSize = randomSize + 'px';
@@ -66,7 +64,7 @@ function loopAnim (){
   riverContainer.appendChild(p);
 
   if (animate === true){
-    setTimeout(loopAnim, 1250);
+    setTimeout(loopAnim, 1500);
   } else {
     riverContainer.innerHTML = '';
     return;
