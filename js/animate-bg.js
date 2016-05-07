@@ -59,7 +59,7 @@ function loopAnim (){
   p.style.position = 'absolute';
   p.style.margin = '0';
   p.style.padding = '0';
-  p.style.opacity = 0.5;
+  p.style.opacity = 0.35;
   p.classList.add('code-piece');
   p.style.transform = 'rotate2d(90deg)';
   riverContainer.appendChild(p);
