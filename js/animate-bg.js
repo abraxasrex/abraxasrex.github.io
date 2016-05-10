@@ -31,7 +31,7 @@ function jsAnimate(){
   if(children.length){
     for(var i = 0; i < children.length; i ++){
       children[i].style.top = parseInt(children[i].style.top.slice(0, -2)) + 1.5 + 'px';
-      if(parseInt(children[i].style.top.slice(0, -2)) > parentHeight + 100 || children.length > 25){
+      if(parseInt(children[i].style.top.slice(0, -2)) > parentHeight + 50 || children.length > 25){
          riverContainer.removeChild(children[i]);
      }
     }
