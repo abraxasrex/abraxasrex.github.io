@@ -52,7 +52,7 @@ function loopAnim (){
   var randomI = getRandom(0, codeStrings.length - 1);
   p.textContent = codeStrings[randomI];
   p.style.fontSize = randomSize + 'px';
-  p.style.top = '750px';
+  p.style.top = '725px';
   p.style.color = userColor;
   p.style.left = randomX + 'px';
   p.style.background = 'rgba(0,0,0,0)';
