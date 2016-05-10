@@ -94,6 +94,7 @@ var socialMedias = {
 var tag_colors = {
   'hackathon': 'Khaki',
   'google APIs': 'LightSalmon',
+  'express.js':'MediumSlateblue',
   'MEAN stack': 'Plum',
   'express.js':'MediumSlateBlue',
   'node.js': 'GreenYellow',

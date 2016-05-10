@@ -2,7 +2,8 @@
 
 -  ~mobile view~
 
-- ~fix anchor tags on 3 models~   
+- ~fix anchor tags on 3 models~  
+
 
 # stretch  
 

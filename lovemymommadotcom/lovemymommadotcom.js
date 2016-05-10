@@ -20,8 +20,9 @@ var userColor = '#587895';
   ];
 
 var riverContainer = document.getElementById('river-container');
-rivercontainer.style.width='100%';
-riverContainer.style.height='100%';
+var parentWidth = riverContainer.style.width;
+var containerHeight = 650;
+
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
