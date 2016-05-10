@@ -5,7 +5,7 @@ var projects = {
       name:'Placedrop',
       description:'Create customized notes and markers on a local map and plan your daily route. Powered by the Google Maps API, this project grew out of my team\'s entry in Expedia\'s February 2016 hackathon.',
       img:'img/place_drop.png',
-      tags:['google APIs', 'hackathon', 'MEAN stack'],
+      tags:['google APIs', 'hackathon', 'express.js'],
       githubLink:'https://github.com/abraxasrex/placedrop',
       liveLink:'https://placedrop.herokuapp.com/'
     },
@@ -95,6 +95,7 @@ var tag_colors = {
   'hackathon': 'Khaki',
   'google APIs': 'LightSalmon',
   'MEAN stack': 'Plum',
+  'express.js':'MediumSlateBlue',
   'node.js': 'GreenYellow',
   'meteor.js': 'MediumAquamarine',
   'FreeCodeCamp': 'LightSteelBlue',

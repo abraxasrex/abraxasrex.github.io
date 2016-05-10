@@ -20,8 +20,8 @@ var userColor = '#587895';
   ];
 
 var riverContainer = document.getElementById('river-container');
-var parentHeight = document.getElementsByClassName('testimonial')[0].clientHeight;
-
+rivercontainer.style.width='100%';
+riverContainer.style.height='100%';
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -31,7 +31,7 @@ function jsAnimate(){
   if(children.length){
     for(var i = 0; i < children.length; i ++){
       children[i].style.top = parseInt(children[i].style.top.slice(0, -2)) + 1.5 + 'px';
-      if(parseInt(children[i].style.top.slice(0, -2)) > parentHeight + 100 || children.length > 25){
+      if(parseInt(children[i].style.top.slice(0, -2)) > 3000 || children.length > 25){
          riverContainer.removeChild(children[i]);
      }
     }
@@ -45,23 +45,20 @@ function jsAnimate(){
 }
 
 function loopAnim (){
-  var p = document.createElement('p');
-  var randomSize = getRandom(minFontSize, maxFontSize);
-  var randomX = getRandom(0, document.body.clientWidth);
-  var randomI = getRandom(0, codeStrings.length - 1);
-
-  p.textContent = codeStrings[randomI];
-  p.style.fontSize = randomSize + 'px';
-  p.style.top = '0px';
-  p.style.color = userColor;
-  p.style.left = randomX + 'px';
-  p.style.background = 'rgba(0,0,0,0)';
-  p.style.position = 'absolute';
-  p.style.margin = '0';
-  p.style.padding = '0';
-  p.style.opacity = 0.35;
-  p.classList.add('code-piece');
-  riverContainer.appendChild(p);
+  var img = document.createElement('img');
+  var randomSize = getRandom(35, 175);
+  var randomX = getRandom(0, 1200);
+ img.src="http://img15.deviantart.net/ddeb/i/2013/329/3/e/cookie__png_by_darksideofgraphic-d6vlc5l.png"
+  img.style.left = randomX + 'px';
+  img.style.position = 'absolute';
+  img.style.margin = '0';
+  img.style.padding = '0';
+  img.style.top = '100px';
+  img.style.zIndex = -1;
+  img.style.maxWidth = randomSize + 'px';
+  img.style.maxHeight = randomSize + 'px';
+  img.classList.add('code-piece');
+  riverContainer.appendChild(img);
 
   if (animate === true){
     setTimeout(loopAnim, 1500);
@@ -70,10 +67,9 @@ function loopAnim (){
     return;
   }
 }
-
 var createRiver = function(){
-  loopAnim();
-  jsAnimate();
+loopAnim();
+jsAnimate();
 };
 
 document.getElementById('nav-animate').addEventListener('click', function(){
