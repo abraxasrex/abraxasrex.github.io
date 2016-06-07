@@ -2,6 +2,14 @@
 var projects = {
   list:[
     {
+      name:'Cardling',
+      description:'Create and keep track of GIF flashcards that help you learn or practice vocabulary.',
+      img:'img/cardling.png',
+      tags: ['MEAN stack', 'Passport'],
+      githubLink: 'https://github.com/abraxasrex/Cardling_2',
+      liveLink: 'https://cardling.herokuapp.com/'
+    },
+    {
       name:'Placedrop',
       description:'Create customized notes and markers on a local map and plan your daily route. Powered by the Google Maps API, this project grew out of my team\'s entry in Expedia\'s February 2016 hackathon.',
       img:'img/place_drop.png',
@@ -103,16 +111,6 @@ var tag_colors = {
   'd3.js': 'Goldenrod',
   'audio programming': 'FloralWhite',
   'angular.js': 'Silver',
-  'foursquare API': 'Tomato'
+  'foursquare API': 'Tomato',
+  'Passport': 'LightSeaGreen'
 }
-
-var wip_projects = [
-  {
-    name:'cardling',
-    description:'Create and keep track of media-based flashcards that help you learn or practice vocabulary.',
-    img:'img/cardling.jpg',
-    tags: ['MEAN stack', 'mobile'],
-    githubLink: '',
-    liveLink: ''
-  }
-];
