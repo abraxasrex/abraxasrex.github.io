@@ -77,12 +77,8 @@ var createRiver = function(){
 };
 
 document.getElementById('nav-animate').addEventListener('click', function(){
-  if(animate === true){
-    animate = false;
-  } else {
-    animate = true;
-    createRiver();
-  }
+  animate = !animate;
+  createRiver();
 });
 
 createRiver();

@@ -27,7 +27,7 @@ function updateCarousel(){
 
 function cycleLeft(){
     current -=1;
-  if(current <= 5 && current >= 0){
+  if(current <= 7 && current >= 0){
     updateCarousel();
   } else {
     current = 0;
@@ -37,7 +37,7 @@ function cycleLeft(){
 
 function cycleRight(){
     current +=1;
-  if(current <= 5 && current >= 0){
+  if(current <= 7 && current >= 0){
     updateCarousel();
   } else {
     current = 0;
