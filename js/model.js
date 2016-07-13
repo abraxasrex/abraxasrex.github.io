@@ -2,6 +2,14 @@
 var projects = {
   list:[
     {
+      name:'Virtua Breakfast',
+      description:'A game for mobile browsers using Three.js and the DeviceOrientation API. Rotate in place to move the flying donut alongside your field of view. Catch the falling oranges and advance to faster levels. Experience the future of breakfast.',
+      img:'img/virtua.png',
+      tags:[ 'Three.js', 'VR', 'express.js'],
+      githubLink:'https://github.com/abraxasrex/virtual_breakfast',
+      liveLink:'https://virtua-breakfast.herokuapp.com'
+    },
+    {
       name:'Cardling',
       description:'Create and keep track of GIF flashcards that help you learn or practice vocabulary.',
       img:'img/cardling.png',
@@ -112,5 +120,7 @@ var tag_colors = {
   'audio programming': 'FloralWhite',
   'angular.js': 'Silver',
   'foursquare API': 'Tomato',
-  'Passport': 'LightSeaGreen'
+  'Passport': 'LightSeaGreen',
+  'Three.js' :'DarkOrange',
+  'VR':'IndianRed'
 }
