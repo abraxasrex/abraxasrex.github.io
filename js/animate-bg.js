@@ -1,6 +1,6 @@
 var animate = true;
-var minFontSize = 15;
-var maxFontSize = 28;
+var minFontSize = 12;
+var maxFontSize = 24;
 var userColor = '#587895';
   var codeStrings = [
     '(function(){a=b})(),a=a)',
