@@ -1,5 +1,4 @@
 # todo  
-
-- streamline code animation  
-- slideshow animation  
-- autogenerate foooter links  
+- ems / rems  
+- manage heroku dynos  
+- autogenerate footer links  

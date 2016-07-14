@@ -26,23 +26,39 @@ function updateCarousel(){
 }
 
 function cycleLeft(){
+  itemContainer.style.transform = 'translateX(100%)';
+  itemContainer.style.opacity = 0;
     current -=1;
-  if(current <= 7 && current >= 0){
+    if(!(current <= 7 && current >= 0)){
+          current = 7;
+    }
+  setTimeout(function(){
+    itemContainer.style.transform = 'translateX(-100%)';
     updateCarousel();
-  } else {
-    current = 0;
-    updateCarousel();
-  }
+  }, 500);
+  setTimeout(function(){
+    itemContainer.style.transform = 'translateX(0%)';
+    itemContainer.style.opacity = 1;
+
+  }, 600);
 }
 
 function cycleRight(){
-    current +=1;
-  if(current <= 7 && current >= 0){
-    updateCarousel();
-  } else {
-    current = 0;
-    updateCarousel();
+ itemContainer.style.transform = 'translateX(-100%)';
+ itemContainer.style.opacity = 0;
+  current += 1;
+  if(!(current <= 7 && current >= 0)){
+        current = 0;
   }
+  setTimeout(function(){
+    itemContainer.style.transform = 'translateX(100%)';
+    updateCarousel();
+  }, 500);
+  setTimeout(function(){
+    itemContainer.style.transform = 'translateX(0%)';
+    itemContainer.style.opacity = 1;
+  }, 750);
+
 }
 
 leftArrow.addEventListener('click', cycleLeft);

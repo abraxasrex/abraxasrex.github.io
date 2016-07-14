@@ -20,7 +20,7 @@ var userColor = '#587895';
   ];
 
 var riverContainer = document.getElementById('river-container');
-var parentHeight = document.getElementsByClassName('testimonial')[0].clientHeight;
+var parentHeight = document.getElementsByClassName('carousel-section')[0].clientHeight;
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -31,9 +31,9 @@ function jsAnimate(){
   if(children.length){
     for(var i = 0; i < children.length; i ++){
       children[i].style.top = parseInt(children[i].style.top.slice(0, -2)) + 1.5 + 'px';
-      if(parseInt(children[i].style.top.slice(0, -2)) > parentHeight + 50 || children.length > 25){
-         riverContainer.removeChild(children[i]);
-     }
+      if(parseInt(children[i].style.top.slice(0, -2)) > parentHeight || children.length > 25){
+        riverContainer.removeChild(children[i]);
+      }
     }
   }
   if (animate === true){
@@ -61,6 +61,13 @@ function loopAnim (){
   p.style.padding = '0';
   p.style.opacity = 0.35;
   p.classList.add('code-piece');
+
+  p.style.webkitTransform = 'rotate(90deg)';
+  p.style.mozTransform    = 'rotate(90deg)';
+  p.style.msTransform     = 'rotate(90deg)';
+  p.style.oTransform      = 'rotate(90deg)';
+  p.style.transform       = 'rotate(90deg)';
+
   riverContainer.appendChild(p);
 
   if (animate === true){

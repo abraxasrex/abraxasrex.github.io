@@ -100,6 +100,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .portfolio_blurb {
