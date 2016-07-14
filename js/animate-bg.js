@@ -71,7 +71,7 @@ function loopAnim (){
   riverContainer.appendChild(p);
 
   if (animate === true){
-    setTimeout(loopAnim, 1500);
+    setTimeout(loopAnim, 2000);
   } else {
     riverContainer.innerHTML = '';
     return;

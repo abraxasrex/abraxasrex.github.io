@@ -39,8 +39,7 @@ function cycleLeft(){
   setTimeout(function(){
     itemContainer.style.transform = 'translateX(0%)';
     itemContainer.style.opacity = 1;
-
-  }, 600);
+  }, 700);
 }
 
 function cycleRight(){
