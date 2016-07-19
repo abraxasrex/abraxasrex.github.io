@@ -76,13 +76,7 @@ and (orientation : portrait) {
 and (min-device-width : 320px)
 and (max-device-width : 570px)
 and (orientation : portrait) {
-body {
-  width: 100%;
-}
 
-#logo-small{
-  font-size: 8px;
-}
 .testimonial article {
   width: 100%;
 }
@@ -96,42 +90,36 @@ body {
   height: 600px;
 }
 nav li {
-  width: 8%;
-  /*padding-left: 5px;
-  padding-right: 5px;*/
   word-wrap: break-word;
-  font-size:6px;
   padding: 0px;
   margin: 0px;
-  /* edit */
-  
+  font-size:0.75em;
+  display: block;
+  width: 25%;
+  height: 50%;
+  line-height: 100%;
+  vertical-align: middle;
 }
 nav li:nth-of-type(1){
-  width: 55%;
-  text-align: left;
-  padding-left: 3px;
+  text-align: center;
+  width: 100%;
+}
+.brand {
+  max-height: 100%;
+  max-width: 100%;
+  line-height:25px;
+  font-size: 1.5em;
 }
 nav li:nth-of-type(4){
- width: 20%;
- text-align: left;
- vertical-align: middle;
-}
-.animate-a{
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-size: 6px;
+ vertical-align: top;
 }
 nav ul {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
-.brand {
-  font-size: 10px;
-  max-height: 100%;
-  max-width: 100%;
-  width: 100%;
-  line-height:25px;
-  height: 25px;
+#logo-small{
+  font-size:0.5em;
 }
 .portfolio_blurb{
   font-size: 8px;
