@@ -1,4 +1,4 @@
-# todo  
+# todo:
+
 - ems / rems  
-- manage heroku dynos  
-- autogenerate footer links  
+- KA cred  
