@@ -7,7 +7,7 @@ var projects = {
       img:'img/glp2.png',
       tags:[ 'client_project', 'MEAN stack'],
       githubLink:'N/A',
-      liveLink:'www.grindlogpro.com'
+      liveLink:'https://www.grindlogpro.com'
     },
     {
       name:'Virtua Breakfast',
