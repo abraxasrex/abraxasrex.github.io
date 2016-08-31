@@ -2,6 +2,14 @@
 var projects = {
   list:[
     {
+      name:'Grind Log Pro',
+      description:'A USDA-compliant web app for grocery stores that scans, logs, and tracks meat grinds.',
+      img:'img/glp.png',
+      tags:[ 'client_project', 'MEAN stack'],
+      githubLink:'N/A',
+      liveLink:'www.grindlogpro.com'
+    },
+    {
       name:'Virtua Breakfast',
       description:'A game for mobile browsers using Three.js and the DeviceOrientation API. Rotate in place to move the flying donut alongside your field of view. Catch the falling oranges and advance to faster levels. Experience the future of breakfast.',
       img:'img/virtua.png',
@@ -122,5 +130,6 @@ var tag_colors = {
   'foursquare API': 'Tomato',
   'Passport': 'LightSeaGreen',
   'Three.js' :'DarkOrange',
-  'VR':'IndianRed'
+  'VR':'IndianRed',
+  'client_project':'PaleVioletRed'
 }
