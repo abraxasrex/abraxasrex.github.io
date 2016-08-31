@@ -29,8 +29,8 @@ function cycleLeft(){
   itemContainer.style.transform = 'translateX(100%)';
   itemContainer.style.opacity = 0;
     current -=1;
-    if(!(current <= 7 && current >= 0)){
-          current = 7;
+    if(!(current <= 8 && current >= 0)){
+          current = 8;
     }
   setTimeout(function(){
     itemContainer.style.transform = 'translateX(-100%)';
@@ -46,7 +46,7 @@ function cycleRight(){
  itemContainer.style.transform = 'translateX(-100%)';
  itemContainer.style.opacity = 0;
   current += 1;
-  if(!(current <= 7 && current >= 0)){
+  if(!(current <= 8 && current >= 0)){
         current = 0;
   }
   setTimeout(function(){
