@@ -4,7 +4,7 @@ var projects = {
     {
       name:'Grind Log Pro',
       description:'A USDA-compliant web app for grocery stores that scans, logs, and tracks meat grinds.',
-      img:'img/glp.png',
+      img:'img/glp2.png',
       tags:[ 'client_project', 'MEAN stack'],
       githubLink:'N/A',
       liveLink:'www.grindlogpro.com'
