@@ -2,20 +2,20 @@
 var projects = {
   list:[
     {
-      name:'Grind Log Pro',
-      description:'A USDA-compliant web app for grocery stores that scans, logs, and tracks meat grinds.',
-      img:'img/glp2.png',
-      tags:[ 'client_project', 'MEAN stack'],
-      githubLink:'N/A',
-      liveLink:'https://www.grindlogpro.com'
-    },
-    {
       name:'Virtua Breakfast',
       description:'A game for mobile browsers using Three.js and the DeviceOrientation API. Rotate in place to move the flying donut alongside your field of view. Catch the falling oranges and advance to faster levels. Experience the future of breakfast.',
       img:'img/virtua.png',
       tags:[ 'Three.js', 'VR', 'express.js'],
       githubLink:'https://github.com/abraxasrex/virtual_breakfast',
       liveLink:'https://virtua-breakfast.herokuapp.com'
+    },
+    {
+      name:'Grind Log Pro',
+      description:'A USDA-compliant web app for grocery stores that scans, logs, and tracks meat grinds.',
+      img:'img/glp2.png',
+      tags:[ 'client_project', 'MEAN stack'],
+      githubLink:'N/A',
+      liveLink:'https://www.grindlogpro.com'
     },
     {
       name:'Cardling',
