@@ -22,12 +22,14 @@ function updateCarousel(){
     itemTags.appendChild(div);
   }
   liveLink.setAttribute('href', projects.list[current].liveLink);
-    if(projects.list[current].githubLink === 'N/A'){
-      console.log('na');
-      githubLink.style.visibility = 'hidden';
+  githubLink.setAttribute('href', projects.list[current].githubLink);
+    if(projects.list[current].private){
+      console.log('no github for current item');
+    //  githubLink.style.visibility = 'hidden';
+      document.getElementsByClassName('github-link')[0].textContent = 'Info'
     } else {
       githubLink.style.visibility = 'visible';
-      githubLink.setAttribute('href', projects.list[current].githubLink);
+      document.getElementsByClassName('github-link')[0].textContent = 'Github';
     }
 }
 
