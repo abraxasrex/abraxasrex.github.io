@@ -2,10 +2,19 @@
 var projects = {
   list:[
     {
+      name:'Billseek',
+      description:'A social application for tracking and sharing the activity of bills and people in Congress, developed with Angular and typescript.',
+      img:'img/Billseek.png',
+      tags:[ 'typescript', 'MEAN stack', 'material design'],
+      liveLink:'http://billseek.herokuapp.com',
+      githubLink:'https://github.com/abraxasrex/BillSeek',
+      exampleLink:'billseek.herokuapp.com/interests/togo123'
+    },
+    {
       name:'Grind Log Pro',
       description:'A USDA-compliant web app for grocery stores that scans, logs, and tracks meat grinds.',
       img:'img/glp2.png',
-      tags:[ 'consumer-facing', 'MEAN stack'],
+      tags:[ 'consumer-facing', 'MEAN stack', 'bootstrap'],
       liveLink:'http://www.grindlogpro.com',
       githubLink:'https://impgrocery.com/our-services/grind-log-pro/',
       private:true
@@ -119,6 +128,9 @@ var socialMedias = {
 var tag_colors = {
   'hackathon': 'Khaki',
   'google APIs': 'LightSalmon',
+  'bootstrap': 'Indigo',
+  'typescript':'Orange',
+  'material design': 'Green',
   'express.js':'MediumSlateblue',
   'MEAN stack': 'Plum',
   'express.js':'MediumSlateBlue',

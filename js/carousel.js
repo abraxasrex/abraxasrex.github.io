@@ -10,6 +10,11 @@ var itemTags = document.getElementById('item-tags');
 var itemContainer = document.getElementById('item-container');
 
 function updateCarousel(){
+  // remove example link
+  var elem = document.getElementById('example');
+  if(elem){
+    elem.parentNode.removeChild(elem);
+  }
   //container, title, info, links, tags
   itemTitle.textContent = projects.list[current].name;
   itemInfo.textContent = projects.list[current].description;
@@ -24,10 +29,10 @@ function updateCarousel(){
   liveLink.setAttribute('href', projects.list[current].liveLink);
   githubLink.setAttribute('href', projects.list[current].githubLink);
     if(projects.list[current].private){
-      console.log('no github for current item');
-    //  githubLink.style.visibility = 'hidden';
       document.getElementsByClassName('github-link')[0].textContent = 'Info'
-    } else {
+    } else if (projects.list[current].exampleLink){
+      document.getElementsByClassName('append-links')[0].insertAdjacentHTML('beforeend', ' <span  id="example">| <a href="http://billseek.herokuapp.com:80/interests/togo123" target="_blank"><div class="github-link">example</div></a></span>')
+    }else {
       githubLink.style.visibility = 'visible';
       document.getElementsByClassName('github-link')[0].textContent = 'Github';
     }
@@ -37,8 +42,8 @@ function cycleLeft(){
   itemContainer.style.transform = 'translateX(100%)';
   itemContainer.style.opacity = 0;
     current -=1;
-    if(!(current <= 8 && current >= 0)){
-          current = 8;
+    if(!(current <= 9 && current >= 0)){
+          current = 9;
     }
   setTimeout(function(){
     itemContainer.style.transform = 'translateX(-100%)';
@@ -54,7 +59,7 @@ function cycleRight(){
  itemContainer.style.transform = 'translateX(-100%)';
  itemContainer.style.opacity = 0;
   current += 1;
-  if(!(current <= 8 && current >= 0)){
+  if(!(current <= 9 && current >= 0)){
         current = 0;
   }
   setTimeout(function(){

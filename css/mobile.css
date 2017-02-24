@@ -148,3 +148,12 @@ and (max-device-width : 1024px){
    float: right;
  }
 }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 375px){
+  .github-link, .live-link {
+    font-size: 0.75em;
+  }
+
+}
