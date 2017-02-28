@@ -24,16 +24,25 @@ function updateCarousel(){
     var div = document.createElement('div');
     div.textContent = projects.list[current].tags[i];
     div.style.background = tag_colors[projects.list[current].tags[i]];
+  //  div.style.marginTop = '25px';
     itemTags.appendChild(div);
   }
   liveLink.setAttribute('href', projects.list[current].liveLink);
   githubLink.setAttribute('href', projects.list[current].githubLink);
     if(projects.list[current].private){
-      document.getElementsByClassName('github-link')[0].textContent = 'Info'
+      document.getElementsByClassName('github-link')[0].textContent = 'Info';
     } else if (projects.list[current].exampleLink){
       document.getElementsByClassName('append-links')[0].insertAdjacentHTML('beforeend', ' <span  id="example">| <a href="http://billseek.herokuapp.com:80/interests/togo123" target="_blank"><div class="github-link">example</div></a></span>')
-    }else {
-      githubLink.style.visibility = 'visible';
+    }else if(projects.list[current].offLine){
+      document.getElementsByClassName('live-link')[0].textContent = 'Offline';
+    //  liveLink.children.textDecoration = 'line-through';
+      document.getElementsByClassName('github-link')[0].textContent = 'Github';
+    } else if(projects.list[current].npmPackage){
+      document.getElementsByClassName('live-link')[0].textContent = 'Npm';
+      document.getElementsByClassName('github-link')[0].textContent = 'Github';
+    } else {
+      document.getElementsByClassName('github-link')[0].style.visibility = 'visible';
+        document.getElementsByClassName('live-link')[0].textContent = 'Live';
       document.getElementsByClassName('github-link')[0].textContent = 'Github';
     }
 }

@@ -5,10 +5,19 @@ var projects = {
       name:'Billseek',
       description:'A social application for tracking and sharing the activity of bills and people in Congress, developed with Angular and typescript.',
       img:'img/Billseek.png',
-      tags:[ 'typescript', 'MEAN stack', 'material design'],
+      tags:[ 'typescript', 'MEAN stack', 'mocha', 'chai'],
       liveLink:'http://billseek.herokuapp.com',
       githubLink:'https://github.com/abraxasrex/BillSeek',
       exampleLink:'billseek.herokuapp.com/interests/togo123'
+    },
+    {
+      name:'Virtua Breakfast',
+      description:'A game for mobile browsers using Three.js and the DeviceOrientation API. Rotate in place to move the flying donut alongside your field of view. Catch the falling oranges and advance to faster levels. Experience the future of breakfast.',
+      img:'img/virtua.png',
+      tags:[ 'Three.js', 'VR', 'express.js'],
+      githubLink:'https://github.com/abraxasrex/virtual_breakfast',
+      liveLink:'https://virtua-breakfast.herokuapp.com',
+      offLine: true
     },
     {
       name:'Grind Log Pro',
@@ -20,20 +29,13 @@ var projects = {
       private:true
     },
     {
-      name:'Virtua Breakfast',
-      description:'A game for mobile browsers using Three.js and the DeviceOrientation API. Rotate in place to move the flying donut alongside your field of view. Catch the falling oranges and advance to faster levels. Experience the future of breakfast.',
-      img:'img/virtua.png',
-      tags:[ 'Three.js', 'VR', 'express.js'],
-      githubLink:'https://github.com/abraxasrex/virtual_breakfast',
-      liveLink:'https://virtua-breakfast.herokuapp.com'
-    },
-    {
       name:'Cardling',
       description:'Create and keep track of GIF flashcards that help you learn or practice vocabulary.',
       img:'img/cardling.png',
       tags: ['MEAN stack', 'Passport'],
       githubLink: 'https://github.com/abraxasrex/Cardling_2',
-      liveLink: 'https://cardling.herokuapp.com/'
+      liveLink: 'https://cardling.herokuapp.com/',
+      offLine: true
     },
     {
       name:'Placedrop',
@@ -41,7 +43,8 @@ var projects = {
       img:'img/place_drop.png',
       tags:['google APIs', 'hackathon', 'express.js'],
       githubLink:'https://github.com/abraxasrex/placedrop',
-      liveLink:'https://placedrop.herokuapp.com/'
+      liveLink:'https://placedrop.herokuapp.com/',
+      offLine: true
     },
     {
       name:'Hungr',
@@ -49,7 +52,8 @@ var projects = {
       img:'img/hungr.png',
       tags:['angular.js', 'meteor.js', 'foursquare API'],
       githubLink:'https://github.com/abraxasrex/hungr',
-      liveLink:'https://hungr-app.herokuapp.com'
+      liveLink:'https://hungr-app.herokuapp.com',
+      offLine: true
     },
     {
       name:'Datamap',
@@ -57,7 +61,8 @@ var projects = {
       githubLink:'https://github.com/abraxasrex/GCC_MAP',
       liveLink:'https://climate-datamap.herokuapp.com',
       img:'img/datamap.png',
-      tags:['d3.js', 'meteor.js']
+      tags:['d3.js', 'meteor.js'],
+      offLine: true
     },
     {
       name:'Simon Says',
@@ -73,7 +78,8 @@ var projects = {
       tags:['meteor.js', 'FreeCodeCamp'],
       githubLink:"https://github.com/abraxasrex/minimal-voting",
       liveLink:"https://minimal-voting.herokuapp.com",
-      img:'img/minimal.png'
+      img:'img/minimal.png',
+      offLine: true
     },
     {
       name:'wav-reverse(npm)',
@@ -81,7 +87,8 @@ var projects = {
       githubLink:'https://www.npmjs.com/package/reverse-wav',
       liveLink:'https://www.npmjs.com/package/reverse-wav',
       img:"https://www.freesound.org/data/displays/181/181129_321967_spec_L.jpg",
-      tags:['node.js', 'audio programming']
+      tags:['node.js', 'audio programming'],
+      npmPackage: true
     }
   ]
 };
@@ -95,10 +102,10 @@ var socialMedias = {
       name: 'LinkedIn',
       link:'https://www.linkedin.com/in/jonathan-reasor-16966352'
     },
-    {
-      name: 'Devpost',
-      link:'http://devpost.com/jbreasor'
-    },
+  //  {
+    //   name: 'Devpost',
+    //   link:'http://devpost.com/jbreasor'
+    // },
     {
       name: 'F.C.C.',
       link:'http://www.freecodecamp.com/abraxasrex'
@@ -126,11 +133,13 @@ var socialMedias = {
   ]};
 
 var tag_colors = {
+  'mocha':'PaleGreen',
+  'chai':'Peachpuff',
   'hackathon': 'Khaki',
   'google APIs': 'LightSalmon',
   'bootstrap': 'Indigo',
   'typescript':'Orange',
-  'material design': 'Green',
+  'material UI': 'Green',
   'express.js':'MediumSlateblue',
   'MEAN stack': 'Plum',
   'express.js':'MediumSlateBlue',
