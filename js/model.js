@@ -6,9 +6,9 @@ var projects = {
       description:'A social application for tracking and sharing the activity of bills and people in Congress, developed with Angular and typescript.',
       img:'img/Billseek.png',
       tags:[ 'typescript', 'MEAN stack', 'mocha', 'chai'],
-      liveLink:'http://billseek.herokuapp.com',
+      liveLink:'http://jbr-app.herokuapp.com/BillSeek',
       githubLink:'https://github.com/abraxasrex/BillSeek',
-      exampleLink:'billseek.herokuapp.com/interests/togo123'
+      exampleLink:'jbr-app.herokuapp.com/BillSeek/interests/togo123'
     },
     {
       name:'Virtua Breakfast',
@@ -16,7 +16,7 @@ var projects = {
       img:'img/virtua.png',
       tags:[ 'Three.js', 'VR', 'express.js'],
       githubLink:'https://github.com/abraxasrex/virtual_breakfast',
-      liveLink:'https://virtua-breakfast.herokuapp.com',
+      liveLink:'http://jbr-app.herokuapp.com/VirtualBreakfast',
       offLine: true
     },
     {

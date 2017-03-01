@@ -1,24 +1,15 @@
 # todo:  
 
-1. Billseek
- d. ^ remove port name from project and add protocol  
- e. calendar text color  
+1. New App
 
 2. Virtua-breakfast  
-  a. migrate / find non-dyno solution (tk free hosting / visual studio hosting?)  
+  a. lock out PCs or non mobile screens.
+  b. click me note on donut  
 
-3. remove or fix non-working apps from portfolio  
-  a. datamap
-  b. minimal poll  
-  c. hungr  
-  d. placedrop  
-
-  4. Portfolio Site  
+3. Portfolio Site  
   a. responsive tile image: https://css-tricks.com/responsive-images-css/
     i.e.: <img  sizes="(min-width: 40em) 80vw, 100vw">
   b. animate body movement  
-
- 5. New App  
 
 ------------------------------------------------------
 
