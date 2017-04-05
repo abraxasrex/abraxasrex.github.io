@@ -8,7 +8,9 @@ var projects = {
       tags:[ 'typescript', 'MEAN stack', 'mocha', 'chai'],
       liveLink:'http://jbr-app.herokuapp.com/BillSeek',
       githubLink:'https://github.com/abraxasrex/BillSeek',
-      exampleLink:'jbr-app.herokuapp.com/BillSeek/interests/togo123'
+      exampleLink:'jbr-app.herokuapp.com/BillSeek/interests/togo123', 
+      offLine: false,
+       npmPackage: false
     },
     {
       name:'Virtua Breakfast',
@@ -17,7 +19,7 @@ var projects = {
       tags:[ 'Three.js', 'VR', 'express.js'],
       githubLink:'https://github.com/abraxasrex/virtual_breakfast',
       liveLink:'http://jbr-app.herokuapp.com/VirtualBreakfast',
-      offLine: true
+      offLine: false
     },
     {
       name:'Grind Log Pro',
@@ -27,6 +29,15 @@ var projects = {
       liveLink:'http://www.grindlogpro.com',
       githubLink:'https://impgrocery.com/our-services/grind-log-pro/',
       private:true
+    },
+       {
+      name:'Notifry',
+      description:'A calendar todo app brought to you by the magic of React.',
+      img:'img/notifry.png',
+      tags:[ 'React', 'material UI', 'webpack'],
+      liveLink:'http://notifry.surge.sh/',
+      githubLink:'https://github.com/abraxasrex/Notefry', 
+      offLine: false
     },
     {
       name:'Cardling',
@@ -70,7 +81,8 @@ var projects = {
       tags:['FreeCodeCamp'],
       githubLink:'wip',
       liveLink:"https://codepen.io/jbreasor/full/pjvGGP",
-      img:'img/simon.png'
+      img:'img/simon.png',
+      offLine: false
     },
     {
       name:'Minimal Polls',
@@ -141,6 +153,7 @@ var tag_colors = {
   'typescript':'Orange',
   'material UI': 'Green',
   'express.js':'MediumSlateblue',
+  'webpack':'MediumSlateblue',
   'MEAN stack': 'Plum',
   'express.js':'MediumSlateBlue',
   'node.js': 'GreenYellow',
@@ -151,6 +164,7 @@ var tag_colors = {
   'angular.js': 'Silver',
   'foursquare API': 'Tomato',
   'Passport': 'LightSeaGreen',
+  'React': 'GreenYellow',
   'Three.js' :'DarkOrange',
   'VR':'IndianRed',
   'consumer-facing':'PaleVioletRed'

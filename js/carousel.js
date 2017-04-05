@@ -33,7 +33,8 @@ function updateCarousel(){
       document.getElementsByClassName('github-link')[0].textContent = 'Info';
     } else if (projects.list[current].exampleLink){
       document.getElementsByClassName('append-links')[0].insertAdjacentHTML('beforeend', ' <span  id="example">| <a href="http://billseek.herokuapp.com:80/interests/togo123" target="_blank"><div class="github-link">example</div></a></span>')
-    }else if(projects.list[current].offLine){
+      document.getElementsByClassName('live-link')[0].textContent = 'Live';
+  }else if(projects.list[current].offLine){
       document.getElementsByClassName('live-link')[0].textContent = 'Offline';
     //  liveLink.children.textDecoration = 'line-through';
       document.getElementsByClassName('github-link')[0].textContent = 'Github';
@@ -51,8 +52,8 @@ function cycleLeft(){
   itemContainer.style.transform = 'translateX(100%)';
   itemContainer.style.opacity = 0;
     current -=1;
-    if(!(current <= 9 && current >= 0)){
-          current = 9;
+    if(!(current <= 10 && current >= 0)){
+          current = 10;
     }
   setTimeout(function(){
     itemContainer.style.transform = 'translateX(-100%)';
@@ -68,7 +69,7 @@ function cycleRight(){
  itemContainer.style.transform = 'translateX(-100%)';
  itemContainer.style.opacity = 0;
   current += 1;
-  if(!(current <= 9 && current >= 0)){
+  if(!(current <= 10 && current >= 0)){
         current = 0;
   }
   setTimeout(function(){
