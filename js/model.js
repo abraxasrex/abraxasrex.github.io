@@ -8,7 +8,7 @@ var projects = {
       tags:[ 'typescript', 'MEAN stack', 'mocha', 'chai'],
       liveLink:'http://jbr-app.herokuapp.com/BillSeek',
       githubLink:'https://github.com/abraxasrex/BillSeek',
-      exampleLink:'jbr-app.herokuapp.com/BillSeek/interests/togo123', 
+      exampleLink:'http://jbr-app.herokuapp.com/BillSeek/interests/togo123', 
       offLine: false,
        npmPackage: false
     },
@@ -36,7 +36,7 @@ var projects = {
       img:'img/notifry.png',
       tags:[ 'React', 'material UI', 'webpack'],
       liveLink:'http://notifry.surge.sh/',
-      githubLink:'https://github.com/abraxasrex/Notefry', 
+      githubLink:'https://github.com/abraxasrex/Notefry',
       offLine: false
     },
     {
