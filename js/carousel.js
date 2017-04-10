@@ -32,7 +32,7 @@ function updateCarousel(){
     if(projects.list[current].private){
       document.getElementsByClassName('github-link')[0].textContent = 'Info';
     } else if (projects.list[current].exampleLink){
-      document.getElementsByClassName('append-links')[0].insertAdjacentHTML('beforeend', ' <span  id="example">| <a href="http://billseek.herokuapp.com:80/interests/togo123" target="_blank"><div class="github-link">example</div></a></span>')
+      document.getElementsByClassName('append-links')[0].insertAdjacentHTML('beforeend', ' <span  id="example">| <a href="http://billseek.herokuapp.com:80/BillSeek/interests/togo123" target="_blank"><div class="github-link">example</div></a></span>')
       document.getElementsByClassName('live-link')[0].textContent = 'Live';
   }else if(projects.list[current].offLine){
       document.getElementsByClassName('live-link')[0].textContent = 'Offline';
