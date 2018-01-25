@@ -3,7 +3,7 @@ var projects = {
   list:[
     {
       name:'Vr Poly Gallery',
-      description:'A multi-platform virtual gallery browser for Google\'s Poly 3D Asset Library. Compatible with desktop, mobile web, Cardboard, or Gear VR!',
+      description:'A multi-platform virtual gallery browser for Google\'s Poly 3D Asset Library. For desktop and mobile browsers.',
       img:'img/poly.jpg',
       tags:[ 'React', 'VR', 'google APIs'],
       liveLink:'http://jbr-app.herokuapp.com/VirtualReaction',
