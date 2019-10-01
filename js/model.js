@@ -32,15 +32,6 @@ var projects = {
       private:true
     },
     {
-      name:'Notifry',
-      description:'A calendar todo app brought to you by the magic of React.',
-      img:'img/notifry.png',
-      tags:[ 'React', 'material UI', 'webpack'],
-      liveLink:'http://notifry.surge.sh/',
-      githubLink:'https://github.com/abraxasrex/Notefry',
-      offLine: false
-    },
-    {
       name:'wav-reverse(npm)',
       description: 'A node package that lets you reverse a .wav file.',
       githubLink:'https://www.npmjs.com/package/reverse-wav',
@@ -57,6 +48,14 @@ var projects = {
       githubLink:'https://github.com/abraxasrex/virtual_breakfast',
       liveLink:'http://jbr-app.herokuapp.com/VirtualBreakfast',
       offLine: false
+    },
+    {
+      name:'Notifry',
+      description:'A calendar todo app brought to you by the magic of React.',
+      img:'img/notifry.png',
+      tags:[ 'React', 'material UI', 'webpack'],
+      githubLink:'https://github.com/abraxasrex/Notefry',
+      offLine: true
     },
     {
       name:'Cardling',
