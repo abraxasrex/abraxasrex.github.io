@@ -46,8 +46,7 @@ var projects = {
       img:'img/virtua.png',
       tags:[ 'Three.js', 'VR', 'express.js'],
       githubLink:'https://github.com/abraxasrex/virtual_breakfast',
-      liveLink:'http://jbr-app.herokuapp.com/VirtualBreakfast',
-      offLine: false
+      offLine: true
     },
     {
       name:'Notifry',
